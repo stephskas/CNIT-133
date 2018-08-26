@@ -1,0 +1,89 @@
+html,
+body {
+    height: 100%;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    color: #fff;
+    font-weight: normal;
+    padding: 1em;
+}
+
+a {
+    font-size: 1.5em;
+    color: white;
+    clear: both;
+}
+
+form {
+    padding-left: 5em;
+}
+
+.checkmark {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* -----------------BUTTONS------------------ */
+
+@-webkit-keyframes buttonAnimation {
+    from {
+        padding: 10px 20px;
+        font-size: inherit;
+    }
+    to {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+}
+
+@keyframes buttonAnimation {
+    from {
+        padding: 10px 20px;
+        font-size: inherit;
+    }
+    to {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: #fc3;
+    background: #30e3ca;
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 50px;
+    margin: 30px 0 10px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #f91;
+    background: darkgray;
+    -webkit-animation-name: buttonAnimation;
+    animation-name: buttonAnimation;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
