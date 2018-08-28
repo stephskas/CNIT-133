@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    color: #012530;
+    color: #fff;
     margin: 0;
     text-align: center;
     font-size: 3em;
@@ -25,10 +25,6 @@ a {
     font-size: 1.5em;
     color: white;
     clear: both;
-}
-
-form {
-    padding-left: 5em;
 }
 
 .checkmark {
