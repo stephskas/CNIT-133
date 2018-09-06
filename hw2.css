@@ -23,6 +23,10 @@ ul {
     list-style-type: none;
 }
 
+nav {
+    color:#444;
+}
+
 a {
     font-size: 1.5em;
     text-decoration: none;
@@ -81,9 +85,15 @@ input {
     line-height: 1.5em;
 }
 
+.italic {
+    font-style: italic;
+}
 .results div {
     color: #f8a043;
     line-height: 1.5em;
+}
+#content {
+    text-align: center;
 }
 
 /* -----------------BUTTONS------------------ */
