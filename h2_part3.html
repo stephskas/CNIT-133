@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h2_part1.html">Part 1</a> -
+            <a href="h2_part2.html">Part 2</a> -
+            <a class="active" href="h2_part3.html">Part 3</a> -
+            <a href="h2_part4.html">Part 4</a> -
+            <a href="h2_extracredit.html">Extra Credit</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 2 - Basic Operations</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a href="h2_part1.html">Part 1 - document.write statements</a></li>
+                <li><a href="h2_part2.html">Part 2 - Input 3 integers</a></li>
+                <li><a class="active" href="h2_part3.html">Part 3 - jQuery</a></li>
+                <li><a href="h2_part4.html">Part 4 - Calculation Table</a></li>
+                <li><a href="h2_extracredit.html">Extra Credit - Exchange rates</a></li>
+            </ul>
+        </section>
+        
+        <main>
+           <details class="active">
+           <p>Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros. For input, use form text boxes. Your results should be displayed using a form textarea or a div element. Define a 'Click to Fade Results' button on the form. Use jQuery to define a ready handler that defines a click event handler for the button, such that clicking the button fades the results in the textarea.</p>
+           <p></p>
+           </details>
+            
+            <form>
+               <section id="numbers">
+                    NUMBER 1: <input type="number" id="number1" value=""><br>
+                    NUMBER 2: <input type="number" id="number2" value=""><br>
+                    NUMBER 3: <input type="number" id="number3" value=""><br>
+                    NUMBER 4: <input type="number" id="number4" value=""><br>
+                    NUMBER 5: <input type="number" id="number5" value=""><br>
+                    <input id="button_results" type="button" value="Results">
+                    <input id="button_fadeResults" type="button" value="Click to Fade Results"><br>
+                </section>
+                   
+                <section class="results">
+                    <div id="positiveNumbers">Number of positive numbers:</div>
+                    <div id="negativeNumbers">Number of negative numbers:</div>
+                    <div id="zeros">Number of zeros:</div>
+                </section>
+            </form>
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+    <script src="h2_part3.js"></script>
+
+</body>
+
+</html>

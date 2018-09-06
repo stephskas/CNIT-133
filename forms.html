@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: .95em;
+            color: #222;
+        }
+        input {
+            text-align: right;
+            padding: 3px;
+            margin-left: 2px;
+        }
+        textarea {
+            padding: 3px;
+            margin-left: 2px;
+
+        }
+        main{
+            width: 300px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #e8e8e8;
+        }
+
+.button_back {
+    background: #444;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button_back:hover {
+    background-color: rgba(72, 61, 76, 0.5);
+}
+
+a.button_back:hover {
+    color: lightgray;
+}
+    </style>
+    
+    <script>
+        function process() { 
+            var number1, number2, n1, n2, sum; 
+            number1 = document.getElementById("num1").value; 
+            number2 = document.getElementById("num2").value; 
+            n1 = parseInt(number1);
+            n2 = parseInt(number2);
+            sum = n1 + n2;
+            document.forms["myform"].elements["result"].value = ("The inputted numbers were " + n1 + " & " + n2 + ".\nThe sum of the integers is " + sum + ".");
+            /* /n is used to cause a line break in the outputted setting. 
+            If we used id instead of name result we would use: document.getElementById("result").value = ("The inputted numbers were " + n1 + ", " + n2 + "\nThe sum of the integers was " + sum);
+            */
+        }
+    </script>
+<!--*
+We could use name or id for "myform" or "num1"
+This assigns the value of the field in myform whose element name is num1 to the variable number1.
+name:
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.forms["myform"].elements["num2"].value;
+id: 
+number1 = document.getElementById("num1").value; 
+number2 = document.getElementById("num2").value; 
+
+number1 = document.myform.num1.value;
+number2 = document.myform.num2.value;
+-->
+
+</head>
+
+<body onload="document.getElementById('name').focus();">
+   <!--This JS method focuses the curser in the input box with Id 'name' on load-->
+    <div class="container">
+        <header>
+            <h1>FORM1</h1>
+        </header>
+
+        <main>
+            <form name="myform">
+                <table>
+                    <tr>
+                        <td>First number:</td>
+                        <td><input type="number" id="num1" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Second number:</td>
+                        <td><input type="number" id="num2" size="20"></td>
+                    </tr>
+                    <!--Although we can use <input type="text"...> to receive numbers from the user, the use of the <input type="number"...> (the new input type from HTML5) is recommended to facilitate the input from the user as well as to make sure that the user will not be able to type a letter or any other special character that is not a number -->
+                    <tr>
+                        <td>Sum is:</td>
+                        <td><textarea rows="4" cols="20" name ="result"></textarea></td>
+                        <!--<td><input type="text" name="result" size="10" readonly></td>-->
+                        <!--The attribute readonly is used in the last input box to prevent the user from typing any number as this box will be used to display the result -->
+                    </tr>
+                    <tr>
+                        <td><input type="button" onclick="process()" value="SUBMIT"></td>
+                        <td><input type="reset" value="RESET"></td>
+                    </tr>
+                </table>
+           <!-- <br> Results:
+            <textarea rows="4" cols="40" name="result"></textarea>
+            <br><br>
+            <input type="button" onclick="process()" value="SUBMIT"></td>
+             <input type="reset" value="RESET"></td> -->
+            </form>
+            
+            <!--<form>
+                <input type="text" id="name" size="20">
+            </form>-->
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+</body>
+
+</html>

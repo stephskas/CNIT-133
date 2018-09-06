@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw2.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a class="active" href="h2_part1.html">Part 1</a> -
+            <a href="h2_part2.html">Part 2</a> -
+            <a href="h2_part3.html">Part 3</a> -
+            <a href="h2_part4.html">Part 4</a> -
+            <a href="h2_extracredit.html">Extra Credit</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 2 - Basic Operations</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a class="active" href="h2_part1.html">Part 1 - document.write statements</a></li>
+                <li><a href="h2_part2.html">Part 2 - Input 3 integers</a></li>
+                <li><a href="h2_part3.html">Part 3 - jQuery</a></li>
+                <li><a href="h2_part4.html">Part 4 - Calculation Table</a></li>
+                <li><a href="h2_extracredit.html">Extra Credit - Exchange rates</a></li>
+            </ul>
+        </section>
+        
+        <main>
+           <details class="active">
+           
+           <p>Create a webpage that contains a script that displays in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space. Write the script using document.write statements. Use a font family of Times New Roman and the color red for the letters ab, a font family of Arial and the color blue for the the numbers 12 and a font family of Impact, the color green, and emphasized (in italics) for the numbers 34.</p>
+           
+           <p>document.getElementById("content").innerHTML = "<span style='color:#ff0000;font-family:\"times new roman\",times,serif;'>ab</span><span style='color:#3366ff;font-family:arial,helvetica,sans-serif;'> 12</span><span style='color:#008000;font-family:\"impact; font-style: italic;'> 34</span>"</p>
+           
+           </details>
+            <p id="content"></p>
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+    <script src="h2_part1.js"></script>
+
+</body>
+
+</html>

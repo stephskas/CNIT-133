@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h2_part1.html">Part 1</a> -
+            <a class="active" href="h2_part2.html">Part 2</a> -
+            <a href="h2_part3.html">Part 3</a> -
+            <a href="h2_part4.html">Part 4</a> -
+            <a href="h2_extracredit.html">Extra Credit</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 2 - Basic Operations</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a href="h2_part1.html">Part 1 - document.write statements</a></li>
+                <li><a class="active" href="h2_part2.html">Part 2 - Input 3 integers</a></li>
+                <li><a href="h2_part3.html">Part 3 - jQuery</a></li>
+                <li><a href="h2_part4.html">Part 4 - Calculation Table</a></li>
+                <li><a href="h2_extracredit.html">Extra Credit - Exchange rates</a></li>
+            </ul>
+        </section>
+        
+        <main>
+           <details class="active">
+           <p>Create a webpage that contains a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. Your results should be displayed using alerts or a form textarea or a div element. (Hint: For finding the smallest and largest number, use the Math Object Methods of min and max.)</p>
+           <p></p>
+           </details>
+            
+            <form>
+                NUMBER 1: <input type="number" id="number1" value=""><br>
+                NUMBER 2: <input type="number" id="number2" value=""><br>
+                NUMBER 3: <input type="number" id="number3" value=""><br>
+                <input id="button_submit" type="submit" value="SUBMIT">
+                <input id="button_reset" type="reset" value="RESET"><br>
+               <section class="results">
+               SUM: <div id="sum"></div>
+               AVERAGE: <div id="average"></div>
+               PRODUCT:<div id="product"></div>
+               </section> 
+                
+            </form>
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+    <script src="h2_part1.js"></script>
+
+</body>
+
+</html>

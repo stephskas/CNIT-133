@@ -17,7 +17,7 @@ h1 {
 h2 {
     color: #fff;
     font-weight: normal;
-    padding: 1em;
+    padding: 1em 0 0 .5em;
 }
 
 a {
@@ -48,7 +48,7 @@ a {
 /* -----------------BUTTONS------------------ */
 
 .button {
-    background: #30e3ca;
+    background: rgba(48, 227, 202, 0.9);
     border-radius: 5px;
     padding: 5px 30px;
     margin: 10px;

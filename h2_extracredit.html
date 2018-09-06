@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h2_part1.html">Part 1</a> -
+            <a href="h2_part2.html">Part 2</a> -
+            <a href="h2_part3.html">Part 3</a> -
+            <a href="h2_part4.html">Part 4</a> -
+            <a class="active" href="h2_extracredit.html">Extra Credit</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 2 - Basic Operations</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a href="h2_part1.html">Part 1 - document.write statements</a></li>
+                <li><a href="h2_part2.html">Part 2 - Input 3 integers</a></li>
+                <li><a href="h2_part3.html">Part 3 - jQuery</a></li>
+                <li><a href="h2_part4.html">Part 4 - Calculation Table</a></li>
+                <li><a class="active" href="h2_extracredit.html">Extra Credit - Exchange rates</a></li>
+            </ul>
+        </section>
+        
+        <main>
+           <details class="active">
+            <p>The exchange rates for 1 U.S. dollar on June 20, 2015 were:</p>
+                <table border="1">
+                <tbody>
+                <tr>
+                <td style="border: 1px dotted gray;">British Pound</td>
+                <td style="border: 1px dotted gray;" align="right">0.77521</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Canadian Dollar</td>
+                <td style="border: 1px dotted gray;" align="right">1.34461</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Euro</td>
+                <td style="border: 1px dotted gray;" align="right">0.88754</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Japanese Yen</td>
+                <td style="border: 1px dotted gray;" align="right">109.350</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Mexican Peso</td>
+                <td style="border: 1px dotted gray;" align="right">18.2806</td>
+                </tr>
+                </tbody>
+                </table>
+                <p> </p>
+                <p>Create a webpage containing a script that will input an amount in U.S. dollars and display in a table its equivalent in each of the above foreign currencies, rounded to 2 decimal places. You should also right justify the amounts.<br><br>For example: an input of 10 U.S. dollars yields:<br><br></p>
+                <table border="1">
+                <tbody>
+                <tr>
+                <td style="border: 1px dotted gray;">British Pound</td>
+                <td style="border: 1px dotted gray;" align="right">7.75</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Canadian Dollar</td>
+                <td style="border: 1px dotted gray;" align="right">13.45</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Euro</td>
+                <td style="border: 1px dotted gray;" align="right">8.88</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Japanese Yen</td>
+                <td style="border: 1px dotted gray;" align="right">1093.50</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Mexican Peso</td>
+                <td style="border: 1px dotted gray;" align="right">182.81</td>
+                </tr>
+                </tbody>
+                </table>
+                <p> </p>
+                <p><strong> </strong></p>
+                <p><strong>Use jQuery to display 'Click to Show/Hide Instructions' above the table and upon clicking this then display 'The foreign exchange rates on <span style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 14.039999961853px; font-style: normal; font-variant: normal; line-height: 19.6560001373291px; text-align: left; text-indent: 0px; white-space: normal; float: none; display: inline !important;">June 6, 2017</span>' and 'Enter a dollar amount in the table below to see the corresponding foreign exchange values'. See this jQuery example: <a href="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle">Show/Hide Panel example</a>.</strong><br><br>I suggest using the following display:<br><br></p>
+                <p>Click to Show/Hide Instructions</p>
+                <table border="1">
+                <tbody>
+                <tr>
+                <th colspan="3">Monetary Exchange Rates</th>
+                </tr>
+                <tr>
+                <th>Currency</th>
+                <th>Rate</th>
+                <th>Value</th>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">British Pound</td>
+                <td style="border: 1px dotted gray;"></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Canadian Dollar</td>
+                <td style="border: 1px dotted gray;"></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Euro</td>
+                <td style="border: 1px dotted gray;"></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Japanese Yen</td>
+                <td style="border: 1px dotted gray;"></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Mexican Peso</td>
+                <td style="border: 1px dotted gray;"></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;" colspan="2"><strong>Enter Amount of U.S. Dollars</strong></td>
+                <td style="border: 1px dotted gray;"></td>
+                </tr>
+                </tbody>
+                </table>
+                
+                <p>Use jQuery to color the input text box to the right of '<strong>Enter Amount of U.S. Dollars'</strong> when the user clicks in that box. For an example, see source code in: <a href="https://hills.ccsf.edu/~cdasilva/cnit133/jquery8.html">https://hills.ccsf.edu/~cdasilva/cnit133/jquery8.html</a> <br></span></p>
+                
+                <p>Note: that the above values for rates can be displayed as faded text within a grey box, by using the attribute of disabled in the form input statements. An alternative is to use the attribute of readonly, which will display the rates as normal text within a grey box.</p>
+<p> </p>
+
+           <p></p>
+           </details>
+            
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+    <script src="h2_part3.js"></script>
+
+</body>
+
+</html>

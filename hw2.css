@@ -3,17 +3,122 @@ body {
     height: 100%;
     background-color: #222;
     font-family: Arial, sans-serif;
+    color: #444;
 }
 
 h1 {
-    color: #fff;
+    color: #d3e4f1;
     margin: 0;
-    text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
+    font-weight: normal;
     padding-top: 25px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    color: #444;
+}
+
+a:hover {
+    color: #888;
+}
+
+main a, section a {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+main, section {
+    margin: 20px 0 20px 0;
+    text-align: left;
+}
+
+div {
+    color: #fff;
+}
+
+form {
+    color: #f8a043;
+    margin-top: 30px;
+}
+
+table {
+    margin: 30px;
+}
+input {
+    line-height: 2em;
+    border: #666;
+    border-radius: 4px;
+    background: #444;
+    margin: 3px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .container {
     width: 760px;
     margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.active {
+    color:rgba(255,255,255,.95); 
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.results div {
+    color: #f8a043;
+    line-height: 1.5em;
+}
+
+/* -----------------BUTTONS------------------ */
+
+.button_back {
+    background: #444;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.button_back:hover {
+    background-color: rgba(72, 61, 76, 0.5);
+}
+
+a.button_back:hover {
+    color: lightgray;
+}
+
+input[type=button], input[type=submit], input[type=reset]   {
+    background: #444;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 20px 5px;
+    border: 1px solid lightgray;
+    color: lightgray;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: rgba(72, 61, 76, 0.5);
 }
