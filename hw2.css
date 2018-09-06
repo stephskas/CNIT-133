@@ -109,11 +109,16 @@ fieldset {
 }
 .results div {
     color: #f8a043;
-    line-height: 1.5em;
 }
-.results input {
+.results input, .results textarea {
     background-color: #222;
-    line-height:1em;
+    height: 20px;
+    border: none;
+    resize: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 8px;
 }
 #content {
     text-align: center;
