@@ -39,24 +39,28 @@
            <p></p>
            </details>
             
-            <form>
-                NUMBER 1: <input type="number" id="number1" value=""><br>
-                NUMBER 2: <input type="number" id="number2" value=""><br>
-                NUMBER 3: <input type="number" id="number3" value=""><br>
-                <input id="button_submit" type="submit" value="SUBMIT">
-                <input id="button_reset" type="reset" value="RESET"><br>
-               <section class="results">
-               SUM: <div id="sum"></div>
-               AVERAGE: <div id="average"></div>
-               PRODUCT:<div id="product"></div>
-               </section> 
-                
+            <form action="">
+               <fieldset>
+                   <label for="n1">NUMBER 1:  </label><input type="number" id="n1" value=""><br>
+                    <label for="n2">NUMBER 2:  </label><input type="number" id="n2" value=""><br>
+                    <label for="n3">NUMBER 3:  </label><input type="number" id="n3" value=""><br>
+                    <input id="button_submit" type="button" value="SUBMIT">
+                    <input id="button_reset" type="button" value="RESET"><br>
+                   
+                   <section class="results">
+                   SUM: <input type="text" id="sumResult" value=""><br>
+                   AVERAGE: <input type="text" id="averageResult"><br>
+                   PRODUCT:<input type="text" id="productResult"><br>
+                   SMALLEST NUMBER:<input type="text"  id="smallestResult">
+                   LARGEST NUMBER:<input type="text"  id="largestResult">
+                   </section> 
+                </fieldset>   
             </form>
         </main>
         <a class="button_back" href="index.html">BACK</a><br>
     </div>
     
-    <script src="h2_part1.js"></script>
+    <script src="h2_part2.js"></script>
 
 </body>
 

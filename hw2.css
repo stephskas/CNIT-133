@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     background-color: #222;
-    font-family: 'LatoWeb', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: #444;
 }
 
@@ -70,6 +70,9 @@ table {
     letter-spacing: 1px;
     margin-bottom: 100px;
 }
+th {
+    font-weight: 100;
+}
 input {
     line-height: 2em;
     border: #666;
@@ -80,6 +83,12 @@ input {
     color: #fff;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+fieldset {
+    max-width: 70%;
+    padding: 30px 30px 15px 30px; 
+    margin-bottom: 50px;
 }
 
 .container {
@@ -101,6 +110,10 @@ input {
 .results div {
     color: #f8a043;
     line-height: 1.5em;
+}
+.results input {
+    background-color: #222;
+    line-height:1em;
 }
 #content {
     text-align: center;
