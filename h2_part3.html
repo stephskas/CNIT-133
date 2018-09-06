@@ -39,22 +39,22 @@
            <p></p>
            </details>
             
-            <form>
-               <section id="numbers">
-                    NUMBER 1: <input type="number" id="number1" value=""><br>
-                    NUMBER 2: <input type="number" id="number2" value=""><br>
-                    NUMBER 3: <input type="number" id="number3" value=""><br>
-                    NUMBER 4: <input type="number" id="number4" value=""><br>
-                    NUMBER 5: <input type="number" id="number5" value=""><br>
+            <form id="numbers">
+               <section>
+                    <label for="n1">NUMBER 1:  </label><input type="number" id="n1" value=""><br>
+                    <label for="n2">NUMBER 2:  </label><input type="number" id="n2" value=""><br>
+                    <label for="n3">NUMBER 3:  </label><input type="number" id="n3" value=""><br>
+                    <label for="n4">NUMBER 4:  </label><input type="number" id="n4" value=""><br>
+                    <label for="n5">NUMBER 5:  </label><input type="number" id="n5" value=""><br>
                     <input id="button_results" type="button" value="Results">
                     <input id="button_fadeResults" type="button" value="Click to Fade Results"><br>
                 </section>
-                   
+                
                 <section class="results">
-                    <div id="positiveNumbers">Number of positive numbers:</div>
-                    <div id="negativeNumbers">Number of negative numbers:</div>
-                    <div id="zeros">Number of zeros:</div>
-                </section>
+                       Number of positive numbers: <textarea id="positiveNumbers"></textarea><br>
+                       Number of negative numbers: <textarea id="negativeNumbers"></textarea><br>
+                       Number of zeros: <textarea id="zeros"></textarea>
+                </section> 
             </form>
         </main>
         <a class="button_back" href="index.html">BACK</a><br>
