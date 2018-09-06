@@ -6,21 +6,25 @@ var n4 = parseInt(document.getElementById("n4").value);
 var n5 = parseInt(document.getElementById("n5").value); 
 // Count the number of the negative numbers, the number of positive numbers, and the number of zeros
 var numbers = [n1, n2, n3, n4, n5];
+
+/*
 for (var i = 0; i < numbers.length; i++) {
 
     if (numbers[i] === 0) {
         zero = numbers[i];
     }
-  /*  else if(numbers[i] > 0) {
-        positive.push = numbers[i];
-    } */
+    else if(numbers[i] > 0) {
+        positive = numbers[i];
+    }
     else {
         negative = numbers[i];
     }
 }
+*/
 var positive = numbers.filter(v => v > 0).length;
 var negative = numbers.filter(v => v < 0).length;
 var zero = numbers.filter(v => v == 0).length;
+
 // Create reference to RESULTS button
 var resultsBtn = document.getElementById('button_results');
 

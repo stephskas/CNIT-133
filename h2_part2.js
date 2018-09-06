@@ -1,9 +1,13 @@
 //  Store the 3 inputed numbers in variables
 var n1 = parseInt(document.getElementById("n1").value); 
 var n2 = parseInt(document.getElementById("n2").value); 
-var n3 = parseInt(document.getElementById("n3").value); 
+var n3 = parseInt(document.getElementById("n3").value);
+parseInt(n1);
+parseInt(n2);
+parseInt(n3);
 var numbers = [n1, n2, n3];
 // Convert inputed string into numbers and calculate sum of the 3 numbers
+
 var sum = parseInt(n1 + n2 + n3);
 // Calculate average of the 3 numbers
 var average = parseInt(sum/numbers.length);
@@ -20,6 +24,7 @@ var resetBtn = document.getElementById('button_reset');
 
 // Clicking on the SUBMIT button inserts sum, average, product, smalles number, and largest number into the corresponding input fields
 submitBtn.addEventListener('click', calculate);
+
 function calculate() {
 document.getElementById("sumResult").value = sum;
 document.getElementById("averageResult").value = average;
@@ -32,9 +37,7 @@ document.getElementById("largestResult").value = largest;
 // Using jQuery clicking on RESET Button runs the reset function and clears all values
 $(document).ready(function(){
     $("input#button_reset").click(function(){
-        $("#n1").val("")
-        $("#n2").val("")
-        $("#n3").val("")
+        $("#numbers")[0].reset();
         $("#sumResult").val("")
         $("#averageResult").val("")
         $("#productResult").val("")
