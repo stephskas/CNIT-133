@@ -18,13 +18,15 @@ All input fields are readonly except for the 'Enter Amount of U.S. Dollars' inpu
 */
 
 function usdfunc() {
-    poundConv.value = parseFloat(usConv.value) * pound;
-    canadianConv.value = parseFloat(usConv.value) * canadianDollar;
-    euroConv.value = parseFloat(usConv.value) * euro;
-    yenConv.value = parseFloat(usConv.value) * yen;
-    pesoConv.value = parseFloat(usConv.value) * peso;
+    poundConv.value = (usConv.value * pound).toFixed(2);
+    canadianConv.value = (usConv.value * canadianDollar).toFixed(2);
+    euroConv.value = (usConv.value * euro).toFixed(2);
+    yenConv.value = (usConv.value * yen).toFixed(2);
+    pesoConv.value = (usConv.value * peso).toFixed(2);
 }
 
+// Create script to round to two decimal places to elements using class 'two_decimal'
+function currency(n){n=parseFloat(n);return isNaN(n)?false:n.toFixed(2);}
 
 // Create drop-down panel for instructions
 $(document).ready(function(){
