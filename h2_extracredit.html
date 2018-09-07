@@ -131,20 +131,59 @@
                 </tr>
                 </tbody>
                 </table>
+            </details>
+                  
+                <!------ START NEW TABLE -------------->
                 
-                <p>Use jQuery to color the input text box to the right of '<strong>Enter Amount of U.S. Dollars'</strong> when the user clicks in that box. For an example, see source code in: <a href="https://hills.ccsf.edu/~cdasilva/cnit133/jquery8.html">https://hills.ccsf.edu/~cdasilva/cnit133/jquery8.html</a> <br></span></p>
-                
-                <p>Note: that the above values for rates can be displayed as faded text within a grey box, by using the attribute of disabled in the form input statements. An alternative is to use the attribute of readonly, which will display the rates as normal text within a grey box.</p>
-<p> </p>
-
-           <p></p>
-           </details>
+                <table id="conversion_table" border="1" cellpadding="10px">
+                <tbody>
+                <tr>
+                <th colspan="3" align="center">MONETARY EXCHANGE RATES</th>
+                </tr>
+                <tr>
+                <td><strong>CURRENCY</strong></td>
+                <td align="right"><strong>RATE</strong></td>
+                    <td align="center"><strong>VALUE</strong></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">British Pound</td>
+                <td style="border: 1px dotted gray;" align="right">0.77521</td>
+                <td style="border: 1px dotted gray;" align="right"><input type="number" id="poundConv" value="0" size="10"  readonly></td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">Canadian Dollar</td>
+                <td style="border: 1px dotted gray;" align="right">1.344</td>
+                <td style="border: 1px dotted gray;" align="right"><input type="number" id="canadianConv" value="0" size="10" readonly></td>
+                </tr>
+                <tr>
+                <td>Euro</td>
+                <td align="right">0.886</td>
+                <td align="right"><input type="number" id="euroConv" value="0" size="10" readonly></td>
+                </tr>
+                <tr>
+                <td>Japanese Yen</td>
+                <td align="right">1093.85</td>
+                <td align="right"><input type="number" id="yenConv" value="0" size="10" readonly></td>
+                </tr>
+                <tr>
+                <td>Mexican Peso</td>
+                <td align="right">18.28</td>
+                <td><input type="number" id="pesoConv" value="0" size="10" readonly></td>
+                </tr>
+                <tr>
+                <td colspan="2" style="background-color:#bec1ce; color=#fff;"><strong>Enter Amount of U.S. Dollars</strong></td>
+                <td align="right" style="background-color:#bec1ce; color=#fff;"><input type="number" id="usConv" value="0" size="10" onchange="usdfunc()"></td>
+                </tr>
+                </tbody>
+                </table>
             
+                <div id="conversionTable_06062017">
+                </div> 
         </main>
         <a class="button_back" href="index.html">BACK</a><br>
     </div>
     
-    <script src="h2_part3.js"></script>
+    <script src="h2_extracredit.js"></script>
 
 </body>
 

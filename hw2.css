@@ -123,7 +123,17 @@ fieldset {
 #content {
     text-align: center;
 }
-
+table#conversion_table td, table#conversion_table input{
+    cellpadding: 10px;
+    background-color: rgb(225, 229, 237);
+    color: #444;
+}
+table#conversion_table th{
+    background-color: rgb(50, 50, 50, .50);
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: 2pt;
+}
 /* -----------------BUTTONS------------------ */
 
 .button_back {
