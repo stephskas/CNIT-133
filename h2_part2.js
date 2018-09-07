@@ -25,18 +25,22 @@ for (var i = 1; i < numbers.length; i++) {
 var submitBtn = document.getElementById('button_submit');
 var resetBtn = document.getElementById('button_reset');
 
-// Clicking on the SUBMIT Button inserts sum, average, product, smalles number, and largest number into the corresponding input fields
+// Clicking on the SUBMIT Button inserts sum, average, product, smallest number, and largest number into the corresponding input fields
 submitBtn.addEventListener('click', calculate);
 function calculate() {
-document.getElementById("sumResult").value = sum;
-document.getElementById("averageResult").value = average;
-document.getElementById("productResult").value = product;
-document.getElementById("smallestResult").value = smallest; 
-document.getElementById("largestResult").value = largest;   
+document.getElementById.numbers[0].value = sum;
+document.getElementById.numbers[1].value = average;
+document.getElementById.numbers[2].value = product;
+document.getElementById.numbers[3].value = smallest; 
+document.getElementById.numbers[4].value = largest;   
 }
 
 // Clicking on the RESET Button runs the reset function 
-document.getElementById('button_reset').addEventListener('click', reset);
+function clearResults()
+{
+    $("sumResult")[0].val("");
+}
+/*document.getElementById('button_reset').addEventListener('click', reset);
 function reset() {
 document.getElementById("sumResult").value = "";
 document.getElementById("averageResult").value = "";
@@ -44,3 +48,4 @@ document.getElementById("productResult").value = "";
 document.getElementById("smallestResult").value = ""; 
 document.getElementById("largestResult").value = "";  
 }
+*/
