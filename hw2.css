@@ -123,6 +123,7 @@ fieldset {
 #content {
     text-align: center;
 }
+table#conversion_table { margin: 50px 0px 40px 0px;}
 table#conversion_table td, table#conversion_table input{
     cellpadding: 10px;
     background-color: rgb(225, 229, 237);
@@ -133,6 +134,19 @@ table#conversion_table th{
     color: #fff;
     font-size: 1.5em;
     letter-spacing: 2pt;
+}
+#panel, #flip {
+    width: 55%;
+    padding: 5px;
+    background-color: #ebede6;
+    border: 1px solid #444;
+    color:#444;
+    cursor: pointer;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
 }
 /* -----------------BUTTONS------------------ */
 
