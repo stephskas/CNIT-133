@@ -4,50 +4,53 @@
 resultsBtn.addEventListener('click', calculate);
 function calculate() {
 // Store the 5 inputed numbers in variables and convert input type to number
-    var n1 = parseInt(document.getElementById('num1').value); 
-    var n2 = parseInt(document.getElementById('num2').value); 
-    var n3 = parseInt(document.getElementById('num3').value); 
-    var n4 = parseInt(document.getElementById('num4').value); 
-    var n5 = parseInt(document.getElementById('num5').value); 
+    var n1 = parseInt(document.getElementById('n1').value), 
+        n2 = parseInt(document.getElementById('n2').value), 
+        n3 = parseInt(document.getElementById('n3').value), 
+        n4 = parseInt(document.getElementById('n4').value), 
+        n5 = parseInt(document.getElementById('n5').value); 
 // Count the number of the negative numbers, the number of positive numbers, and the number of zeros
     var numbers = [n1, n2, n3, n4, n5];
-    var zero;
-    var positive;
-    var negative;
+    var positiveCount = 0,
+        negativeCount = 0,
+        zeroCount = 0;
+    
+    numbers.forEach((number) => {
+        if (number === 0) {
+            zeroCount++ 
+        } else if (number < 0) {
+            negativeCount++
+        } else if (number > 0) {
+            positiveCount++
+        }
+    })
+// Store locations of textareas for calculated values  
+    var positiveNumbers = document.getElementById('positiveNumbers');
+    var negativeNumbers = document.getElementById('negativeNumbers');
+    var zeros = document.getElementById('zeros'); 
+// Insert calculated value into corresponding textarea
+    positiveNumbers.value = positiveCount;
+    negativeNumbers.value = negativeCount;
+    zeros.value = zeroCount;
+};
 
-    positive = numbers.filter(v => v > 0).length;
+/*    
+positive = numbers.filter(v => v > 0).length;
     negative = numbers.filter(v => v < 0).length;
     zero = numbers.filter(v => v == 0).length;
 };
-    
-/*  For (var i = 0; i < numbers.length; i++) {
-        if (numbers[i] === 0) {
-            zero = numbers[i];
-        }
-        else if(numbers[i] > 0) {
-            positive = numbers[i];
-        }
-        else {
-            negative = numbers[i];
-
-  }
 */  
-    
-var positiveNumbers = document.getElementById("positiveNumbers").value;
-var negativeNumbers = document.getElementById("negativeNumbers").value;
-var zeros = document.getElementById("zeros").value; 
-
 // Using jQuery clicking on 'Click to Fade Results' button fades the results
 $(document).ready(function(){
     $("input#button_fadeResults").click(function(){
         $("textarea#positiveNumbers").fadeTo("slow", 0);
         $("textarea#negativeNumbers").fadeTo("slow", 0);
         $("textarea#zeros").fadeTo("slow", 0);
-        $("#num1").val("")
-        $("#num2").val("")
-        $("#num3").val("")
-        $("#num4").val("")
-        $("#num5").val("")
+        $("#n1").val("")
+        $("#n2").val("")
+        $("#n3").val("")
+        $("#n4").val("")
+        $("#n5").val("")
     })
 });
 

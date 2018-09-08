@@ -4,7 +4,7 @@
 // Clicking on the SUBMIT Button inserts sum, average, product, smallest number, and largest number into the corresponding input fields
 submitBtn.addEventListener('click', calculate);
 function calculate() {
-//  Store the 3 inputed numbers in variables and convert input type to number
+// Store the 3 inputed numbers in variables and convert input type to number
     var n1 = parseInt(document.getElementById('n1').value); 
     var n2 = parseInt(document.getElementById('n2').value); 
     var n3 = parseInt(document.getElementById('n3').value); 
