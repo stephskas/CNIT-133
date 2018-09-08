@@ -7,7 +7,7 @@ function calculate() {
     var n1 = parseInt(document.getElementById('num1').value); 
     var n2 = parseInt(document.getElementById('num2').value); 
     var n3 = parseInt(document.getElementById('num3').value); 
-    var n4 = parseInt(documennt.getElementById('num4').value); 
+    var n4 = parseInt(document.getElementById('num4').value); 
     var n5 = parseInt(document.getElementById('num5').value); 
 // Count the number of the negative numbers, the number of positive numbers, and the number of zeros
     var numbers = [n1, n2, n3, n4, n5];
