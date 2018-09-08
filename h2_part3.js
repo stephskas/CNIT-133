@@ -34,25 +34,24 @@ function calculate() {
     zeros.value = zeroCount;
 };
 
-/*    
-positive = numbers.filter(v => v > 0).length;
-    negative = numbers.filter(v => v < 0).length;
-    zero = numbers.filter(v => v == 0).length;
-};
-*/  
 // Using jQuery clicking on 'Click to Fade Results' button fades the results
 $(document).ready(function(){
     $("input#button_fadeResults").click(function(){
         $("textarea#positiveNumbers").fadeTo("slow", 0);
         $("textarea#negativeNumbers").fadeTo("slow", 0);
         $("textarea#zeros").fadeTo("slow", 0);
-        $("#n1").val("")
-        $("#n2").val("")
-        $("#n3").val("")
-        $("#n4").val("")
-        $("#n5").val("")
     })
-});
-
-
-    
+});s
+// Clicking on the RESET Button runs the reset function 
+resetBtn.addEventListener('click', clearResults);
+function clearResults(){
+        n1.value = "";
+        n2.value = "";
+        n3.value = "";
+        n4.value = "";
+        n5.value = "";
+        positiveNumbers.value = "";
+        negativeNumbers.value = "";
+        zeros.value = "";
+};
+  
