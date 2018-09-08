@@ -37,7 +37,6 @@ var positiveNumbers = document.getElementById("positiveNumbers").value;
 var negativeNumbers = document.getElementById("negativeNumbers").value;
 var zeros = document.getElementById("zeros").value; 
 
-
 // Using jQuery clicking on 'Click to Fade Results' button fades the results
 $(document).ready(function(){
     $("input#button_fadeResults").click(function(){
