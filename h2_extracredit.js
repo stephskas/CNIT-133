@@ -13,10 +13,19 @@ var euroConv = document.getElementById("euroConv");
 var yenConv = document.getElementById("yenConv");
 var pesoConv = document.getElementById("pesoConv");
 
+/*
+Change the input field background color when a visitor clicks or tabs into it. Select the input field, use the focus( ) event, use $(this) to
+address the input field inside the anonymous function, and use the .css( ) function to change the background color of the text field.
+*/
+$('#usConv').focus(function() {
+		$(this).css({
+            'background-color' : '#222',
+            'color' : '#fff'
+            })
+	});     // end focus
 /* 
 All input fields are readonly except for the 'Enter Amount of U.S. Dollars' input field. Entering or changing a value in this input field calls function usdfunc to convert amounts. Calculate conversion values for each currency and insert value into table in corresponding input fields  
 */
-
 function usdfunc() {
     poundConv.value = (usConv.value * pound).toFixed(2);
     canadianConv.value = (usConv.value * canadianDollar).toFixed(2);
