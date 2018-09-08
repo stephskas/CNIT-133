@@ -52,7 +52,7 @@ function clearResults(){
         n4.value = "";
         n5.value = "";
 };
-// Using jQuery: clicking on reset button fades in results text area to display next results
+// Using jQuery: clicking on Reset button fades in results text area to display next results
 $(document).ready(function(){
     $("input#button_reset").click(function(){
         $("textarea").val("");
