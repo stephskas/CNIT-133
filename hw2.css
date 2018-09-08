@@ -91,6 +91,9 @@ fieldset {
     margin-bottom: 50px;
 }
 
+textarea {
+    vertical-align: bottom;
+}
 .container {
     width: 760px;
     margin: 0 auto;
@@ -107,9 +110,11 @@ fieldset {
 .italic {
     font-style: italic;
 }
+
 .results div {
     color: #f8a043;
 }
+
 .results input, .results textarea {
     background-color: #222;
     height: 20px;
@@ -120,15 +125,18 @@ fieldset {
     font-size: 16px;
     padding-left: 8px;
 }
+
 #content {
     text-align: center;
 }
+
 table#conversion_table { margin: 50px 0px 40px 0px;}
 table#conversion_table td, table#conversion_table input{
     cellpadding: 10px;
     background-color: rgb(225, 229, 237);
     color: #444;
 }
+
 table#conversion_table th{
     background-color: rgb(50, 50, 50, .50);
     color: #fff;
