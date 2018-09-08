@@ -20,7 +20,8 @@ address the input field inside the anonymous function, and use the .css( ) funct
 $('#usConv').focus(function() {
 		$(this).css({
             'background-color' : '#222',
-            'color' : '#fff'
+            'color' : '#fff',
+            'border' : '2px solid rgb(225, 229, 237)'
             })
 	});     // end focus
 /* 
