@@ -1,7 +1,8 @@
-// Create reference to Results and Click to Fade Results button
+// Create reference to Results, Click to Fade Results, and Reset buttons
     var resultsBtn = document.getElementById('button_results');
     var fadeResultsBtn = document.getElementById('button_fadeResults');
-// Clicking on the RESULTS button inserts the number of positive, negative and zero numbers into the corresponding input fields
+    var resetBtn = document.getElementById('button_reset');
+// Clicking on the Results button inserts the number of positive, negative and zero numbers into the corresponding input fields
 resultsBtn.addEventListener('click', calculate);
 function calculate() {
 // Store the 5 inputed numbers in variables and convert input type to number
@@ -40,14 +41,10 @@ $(document).ready(function(){
         $("textarea#positiveNumbers").fadeOut("slow", 0);
         $("textarea#negativeNumbers").fadeOut("slow", 0);
         $("textarea#zeros").fadeOut("slow", 0);
-        $("textarea").val("");
-        $("textarea#positiveNumbers").fadeIn();
-        $("textarea#negativeNumbers").fadeIn();
-        $("textarea#zeros").fadeIn();
     })
 })
-// Clicking on the 'Click to Fade Results' button runs the clearResults function 
-fadeResultsBtn.addEventListener('click', clearResults);
+// Clicking on the Reset button runs the clearResults function 
+resetBtn.addEventListener('click', clearResults);
 function clearResults(){
         n1.value = "";
         n2.value = "";
@@ -55,13 +52,12 @@ function clearResults(){
         n4.value = "";
         n5.value = "";
 };
-/*
-// Using jQuery: after values have been faded make the textarea visible to display next results 
+// Using jQuery: clicking on reset button fades in results text area to display next results
 $(document).ready(function(){
-    $("input#button_results").click(function(){
-        $("#positiveNumbers").show();
-        $("#negativeNumbers").show();
-        $("#zeros").show();
+    $("input#button_reset").click(function(){
+        $("textarea").val("");
+        $("textarea#positiveNumbers").fadeIn();
+        $("textarea#negativeNumbers").fadeIn();
+        $("textarea#zeros").fadeIn();
     })
-});
-*/
+})
