@@ -1,5 +1,7 @@
-// Create reference to RESULTS button
+// Create reference to Results and Click to Fade Results button
     var resultsBtn = document.getElementById('button_results');
+    var fadeResultsBtn = document.getElementById('button_fadeResults');
+
 // Clicking on the RESULTS button inserts the number of positive, negative and zero numbers into the corresponding input fields
 resultsBtn.addEventListener('click', calculate);
 function calculate() {
@@ -41,9 +43,9 @@ $(document).ready(function(){
         $("textarea#negativeNumbers").fadeTo("slow", 0);
         $("textarea#zeros").fadeTo("slow", 0);
     })
-});s
-// Clicking on the RESET Button runs the reset function 
-resetBtn.addEventListener('click', clearResults);
+});
+// Clicking on the 'Click to Fade Results' button runs the clearResults function 
+fadeResultsBtn.addEventListener('click', clearResults);
 function clearResults(){
         n1.value = "";
         n2.value = "";
