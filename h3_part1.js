@@ -1,9 +1,5 @@
-// Run script on click to show and hide panel with assignment instructions
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    });
-});// Create reference to Show Grade and Reset buttons
+alert("Testing");
+// Create reference to Show Grade and Reset buttons
 var showGradeBtn = document.getElementById('button_results');
 var resetBtn = document.getElementById('button_reset');
 // Create reference to grade field
@@ -51,3 +47,9 @@ function clearValues(){
         ACR.value = "";
         grade.value = "";
 };
+// Run script on click to show and hide panel with assignment instructions
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});

@@ -39,6 +39,9 @@ a:hover {
     color: #888;
 }
 
+fieldset {
+    padding: 25px;
+}
 input {
     width: 60px;
     margin: 8px 0;
@@ -84,6 +87,16 @@ div {
     display: none;
 }
 
+.results textarea {
+    background-color: #222;
+    height: 20px;
+    border: none;
+    resize: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 8px;
+}
 /* -----------------BUTTONS------------------ */
 
 .button_back {
