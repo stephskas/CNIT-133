@@ -7,8 +7,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Stephanie Sakai" />
     <link rel="stylesheet" type="text/css" href="hw3.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+
 </head>
 
 <body>
@@ -72,23 +71,22 @@
            </div> <!-- END PANEL DIV -->
            
         <main>
-        
             <p>Enter values to calculate the student's final grade.</p>
             
             <form>
                 <fieldset>
-                    <label for="hwAvg">Homework Average: </label><input type="number" id="hwAvg" value="">
+                    <label for="homeworkAvg">Homework Average: </label><input type="number" id="homeworkAvg" value="">
                     <br>
-                    <label for="midExam">Midterm Score: </label><input type="number" id="midExam" value="">
+                    <label for="midtermExamScore">Midterm Score: </label><input type="number" id="midtermExamScore" value="">
                     <br>
-                    <label for="finalExam">Final Exam Score:  </label><input type="number" id="finalExam" value="">
+                    <label for="finalExamScore">Final Exam Score:  </label><input type="number" id="finalExamScore" value="">
                     <br>
-                    <label for="ACR">ACR: </label><input type="number" id="ACR" value="">
+                    <label for="acrScore">ACR: </label><input type="number" id="acrScore" value="">
                     <br>
-                    <input class="button_form" id="button_results" type="button" value="Show Grade">
-                    <input class="button_form" id="button_reset" type="button" value="Reset">
+                    <button class="button_form" id="button_results">Show Grade</button>
+                        <button class="button_form" id="button_reset">Reset</button>
 
-	                <div class="results">GRADE: <textarea id="grade"></textarea></div>
+	                <div class="results" id="grade">GRADE: </div>
                 </fieldset>
             </form>
         </main>
