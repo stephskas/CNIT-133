@@ -72,19 +72,26 @@ div {
     font-style: italic;
 }
 
-#panel, #flip {
-    margin: 20px 0px;
+#flip {
+    margin-top: 20px;
     padding: 5px;
     border-radius: 5px;
     text-align: center;
     letter-spacing: 1px;
     background-color: #444;
     border: solid 1px #888;
+    font-size: 14px;    
+    font-weight: normal;
 }
 
 #panel {
-    padding: 50px;
+    margin: 0px;
+    padding: 20px;
     display: none;
+    border-radius: 5px;
+    background-color: #222;
+    text-align: left;
+    line-height: 1.25em;
 }
 
 .results textarea {
