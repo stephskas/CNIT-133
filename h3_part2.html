@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework 3 - Functions</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+            });
+        });
+
+        $( function() {
+            $( document ).tooltip();
+          } );
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h3_part1.html">Part 1</a> -
+            <a class="active" href="h3_part2.html">Part 2</a> -
+            <a href="h3_part3.html">Part 3</a> -
+            <a href="h3_part4.html">Part 4</a>
+        </nav>
+        <section>
+            <ul>
+                <li><a href="h3_part1.html">Part 1 - Student Grade Calculator</a></li>
+                <li><a class="active" href="h3_part2.html">Part 2 - Total Sales and Earnings</a></li>
+                <li><a href="h3_part3.html">Part 3</a></li>
+                <li><a href="h3_part4.html">Part 4</a></li>
+            </ul>
+        </section>
+        <header>
+            <h1>Weekly Sales and Earnings</h1>
+        </header>
+        
+        <div id ="flip">Click to Show/Hide Instructions</div>
+        <div id="panel">
+                <p>
+                   A large company pays its salespeople on a commission basis. The salespeople receive $200 per week, plus 9% of their gross sales for that week. For example, a salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9% of $5000, or a total of $650. You have been supplied with a list of the items sold by each salesperson. The value of these items are as follows:
+                   
+                <table cellspacing="5">
+                <tbody>
+                <tr>
+                <th>Item</th>
+                <th>Value</th>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">1</td>
+                <td style="border: 1px dotted gray;">239.99</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">2</td>
+                <td style="border: 1px dotted gray;">129.75</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">3</td>
+                <td style="border: 1px dotted gray;">99.95</td>
+                </tr>
+                <tr>
+                <td style="border: 1px dotted gray;">4</td>
+                <td style="border: 1px dotted gray;">350.89</td>
+                </tr>
+                </tbody>
+                </table>
+                
+                <p>Create a webpage that contains a script that includes at the top of your form  a text box for the salesperson's name for the user to enter. When the user's mouse hovers over this name field, use the jQuery UI tooltip coding to display the message "Please make sure that the salesperson's name is spelled correctly". See this site for more about the <a href="http://jqueryui.com/tooltip/">jQuery UI tooltip (Links to an external site.)</a> Next input that salesperson's items sold. Then calculates how much the salesperson sold and how much they earned, and then output the results. Be sure to round the outputted results to 2 decimal places. Use form text boxes to input the number sold for each of the items 1-4. You should also check for valid numeric input (make sure the number of items sold is never negative, &lt; 0, as nobody sells negative number of items, right?) and right-justify all amounts. Here is a <a href="http://fog.ccsf.edu/~srubin/h3pt2display.html">sample display (Links to an external site.)</a> using tables and form elements.
+                </p>
+           </div> <!-- END PANEL DIV -->
+           
+        <main>
+        
+            <form id="salesForm">
+                    <label for="repName"><h3>Sales Representative Name:</h3> </label><input type="text" id="repName" name="repname" title="Please make sure that the salesperson&apos;s name is spelled correctly">
+                    <h3>Number of Items Sold:</h3>
+                    <table id="salesTable">
+                        <tr>
+                            <th>ITEM1:</th>
+                            <td><input type="number" id="item1" onchange="calc()"></td>
+                        </tr>
+                        <tr>
+                            <th>ITEM2:</th>
+                            <td><input type="number" id="item2" onchange="calc()"></td>
+                        </tr>  
+                        <tr>
+                            <th>ITEM3:</th>
+                            <td><input type="number" id="item3" onchange="calc()"></td>
+                        </tr>
+                        <tr>
+                            <th>ITEM4:</th>
+                            <td><input type="number" id="item4" onchange="calc()"></td>
+                        </tr>
+                  </table>
+             <input type="button" value="submit" id="submt" onclick="calc()">
+              <input type="reset"  value="reset" onclick="location.reload()">
+        </form>
+         <table id="frmTbl">
+                <tr>
+                <th>ITEM#:</th>
+                <th>PRICE:</th>
+                <th class="qty">QUANTITY SOLD:</th>
+                <th>TOTAL:</th></tr>
+        
+            <tr>
+            <td class="itemNum">1</td>
+            <td>$239.99</td>
+            <td><div  class="ns" name="nums1" id="num1"></div></td>
+            <td><div  class="ts" id="ts1" name="ts1"></div></td>
+            </tr>
+            <tr>
+            <td class="itemNum">2</td>
+            <td>$129.75</td>
+            <td><div  class="ns" name="nums1" id="num2"></div></td>
+            <td><div  class="ts" id="ts2" name="ts2"></div></td>
+            </tr>
+            <tr>
+            <td class="itemNum">3</td>
+            <td>$99.95</td>
+            <td><div  class="ns" name="nums1" id="num3"></div></td>
+            <td><div  class="ts" id="ts3" name="ts3"></div></td>
+            </tr>
+            <tr>
+            <td class="itemNum">4</td>
+            <td>$350.89</td>
+            <td><div  class="ns" name="nums1" id="num3"></div></td>
+            <td><div  class="ts" id="ts3" name="ts3"></div></td>
+            </tr>
+            <tr>
+            <td colspan="2">Total Amount Sold:</td>
+                <td rowspan><div  class="ns" name="amtSold" id="amtSold"></div></td>
+            </tr>
+            <tr>
+            <td colspan="2">Total Weekly Earnings:</td>
+            <td><div  id="wkEarnings" name="wkEarnings"></div></td>
+            </tr>
+           
+</table>
+    
+    </div>
+   
+     <script>
+         function calcIt(){
+             var ioner = document.getElementById("ione").value;
+             var itwor = document.getElementById("itwo").value;
+             var ithreer = document.getElementById("ithree").value;
+             var ifourr = document.getElementById("ifour").value;
+             var w = (ioner * 239.99).toFixed(2);
+              var x = (itwor * 129.75).toFixed(2);
+              var y = (ithreer * 99.95).toFixed(2);
+              var z = (ifourr * 350.89).toFixed(2); 
+             document.getElementById('nums1').innerHTML = ioner;
+             document.getElementById('nums2').innerHTML = itwor;
+             document.getElementById('nums3').innerHTML = ithreer;
+             document.getElementById('nums4').innerHTML = ifourr;
+             
+             document.getElementById('ts1').innerHTML = w;
+             document.getElementById('ts2').innerHTML = x;
+             document.getElementById('ts3').innerHTML = y;
+             document.getElementById('ts4').innerHTML = z;
+             var m =   + (w) +  + (x) +  + (y) +  + (z) ;
+             m = parseFloat(m);
+              m = Math.round(m * 100)/100;
+            
+              document.getElementById('amtSold').innerHTML = m.toFixed(2);
+             
+             var n = ((m * .09))+ +(200);
+              n = parseFloat(n);
+             n = Math.round(n * 100)/100;
+              document.getElementById('wkEarnings').innerHTML = n.toFixed(2);
+             if (isNaN(m)){
+                 alert("Enter numeric values only!")
+             } 
+         }
+    </script>
+        
+        
+        
+        </main>
+        
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+    <script src="h3_part2.js"></script>
+
+</body>
+
+</html>

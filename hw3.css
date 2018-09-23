@@ -15,6 +15,8 @@ h1 {
 }
 h3 {
     color: #f8a043;
+    padding: 0px;
+    margin: 25px 0px 2px 0px;
 }
 p {
     font-weight: 100;
@@ -48,7 +50,7 @@ input {
 }
 
 main, section {
-    margin: 20px 0 20px 0;
+    margin: 20px;
     text-align: left;
 }
 div {
@@ -70,6 +72,14 @@ div {
 
 .italic {
     font-style: italic;
+}
+
+.itemNum {
+    text-align: center;
+}
+
+th.qty {
+    padding-right: 30px;
 }
 
 #flip {
@@ -94,15 +104,17 @@ div {
     line-height: 1.25em;
 }
 
-.results textarea {
-    background-color: #222;
-    height: 20px;
-    border: none;
-    resize: none;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 8px;
+#myFinalGrade {
+    padding-top: 20px;    
+}
+
+#salesTable input {
+    width: 150px;
+}
+
+#repName {
+    width: 250px;
+    margin-botom: 20px;
 }
 /* -----------------BUTTONS------------------ */
 
