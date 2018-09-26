@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- TOTAL AMOUNT SOLD AND TOTAL WEEKLY EARNINGS - not updating onchange, need to pass current values to function to reprocess and update display -->
 <head>
     <title>CNIT 133 Homework 3 - Functions</title>
     <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
@@ -8,6 +8,8 @@
     <meta name="author" content="Stephanie Sakai" />
     <link rel="stylesheet" type="text/css" href="hw3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(document).ready(function(){
             $("#flip").click(function(){
@@ -33,8 +35,8 @@
             <ul>
                 <li><a href="h3_part1.html">Part 1 - Student Grade Calculator</a></li>
                 <li><a class="active" href="h3_part2.html">Part 2 - Total Sales and Earnings</a></li>
-                <li><a href="h3_part3.html">Part 3</a></li>
-                <li><a href="h3_part4.html">Part 4</a></li>
+                <li><a href="h3_part3.html">Part 3 - Temperature Converter</a></li>
+                <li><a href="h3_part4.html">Part 4 - Multiplication Game</a></li>
             </ul>
         </section>
         <header>
@@ -83,112 +85,115 @@
                     <table id="salesTable">
                         <tr>
                             <th>ITEM1:</th>
-                            <td><input type="number" id="item1" onchange="calc()"></td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item1" onchange="calc()"></td>
                         </tr>
                         <tr>
                             <th>ITEM2:</th>
-                            <td><input type="number" id="item2" onchange="calc()"></td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item2" onchange="calc()"></td>
                         </tr>  
                         <tr>
                             <th>ITEM3:</th>
-                            <td><input type="number" id="item3" onchange="calc()"></td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item3" onchange="calc()"></td>
                         </tr>
                         <tr>
                             <th>ITEM4:</th>
-                            <td><input type="number" id="item4" onchange="calc()"></td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item4" onchange="calc()"></td>
                         </tr>
                   </table>
-             <input type="button" value="submit" id="submt" onclick="calc()">
-              <input type="reset"  value="reset" onclick="location.reload()">
+             <input type="button" value="submit" class="button_form" id="submit" onclick="calc()">
+             <input type="reset"  value="reset" class="button_form" onclick="location.reload()">
         </form>
-         <table id="frmTbl">
-                <tr>
-                <th>ITEM#:</th>
-                <th>PRICE:</th>
-                <th class="qty">QUANTITY SOLD:</th>
-                <th>TOTAL:</th></tr>
-        
+        <table id="calcTable">
             <tr>
-            <td class="itemNum">1</td>
+            <th>ITEM#:</th>
+            <th>PRICE:</th>
+            <th class="qty">QUANTITY SOLD:</th>
+            <th class="total">TOTAL:</th>
+            </tr>
+            <tr>
+            <td>1</td>
             <td>$239.99</td>
-            <td><div  class="ns" name="nums1" id="num1"></div></td>
-            <td><div  class="ts" id="ts1" name="ts1"></div></td>
+            <td><div name="qty1" id="qty1"></div></td>
+            <td><div id="sales1" name="sales1"></div></td>
             </tr>
             <tr>
-            <td class="itemNum">2</td>
+            <td>2</td>
             <td>$129.75</td>
-            <td><div  class="ns" name="nums1" id="num2"></div></td>
-            <td><div  class="ts" id="ts2" name="ts2"></div></td>
+            <td><div name="qty2" id="qty2"></div></td>
+            <td><div name="sales2" id="sales2"></div></td>
             </tr>
             <tr>
-            <td class="itemNum">3</td>
+            <td>3</td>
             <td>$99.95</td>
-            <td><div  class="ns" name="nums1" id="num3"></div></td>
-            <td><div  class="ts" id="ts3" name="ts3"></div></td>
+            <td><div name="qty3" id="qty3"></div></td>
+            <td><div name="sales3" id="sales3" ></div></td>
             </tr>
             <tr>
-            <td class="itemNum">4</td>
+            <td>4</td>
             <td>$350.89</td>
-            <td><div  class="ns" name="nums1" id="num3"></div></td>
-            <td><div  class="ts" id="ts3" name="ts3"></div></td>
+            <td><div name="qty4" id="qty4"></div></td>
+            <td><div name="sales4" id="sales4"></div></td>
             </tr>
             <tr>
-            <td colspan="2">Total Amount Sold:</td>
-                <td rowspan><div  class="ns" name="amtSold" id="amtSold"></div></td>
+            <td colspan="2"><p>Total Amount Sold:</p></td>
+            <td rowspan><div name="amtSold" id="amtSold"></div></td>
             </tr>
             <tr>
             <td colspan="2">Total Weekly Earnings:</td>
-            <td><div  id="wkEarnings" name="wkEarnings"></div></td>
+            <td><div name="wkTotal" id="wkTotal"></div></td>
             </tr>
-           
-</table>
-    
-    </div>
+        </table> 
+    </main>
    
-     <script>
-         function calcIt(){
-             var ioner = document.getElementById("ione").value;
-             var itwor = document.getElementById("itwo").value;
-             var ithreer = document.getElementById("ithree").value;
-             var ifourr = document.getElementById("ifour").value;
-             var w = (ioner * 239.99).toFixed(2);
-              var x = (itwor * 129.75).toFixed(2);
-              var y = (ithreer * 99.95).toFixed(2);
-              var z = (ifourr * 350.89).toFixed(2); 
-             document.getElementById('nums1').innerHTML = ioner;
-             document.getElementById('nums2').innerHTML = itwor;
-             document.getElementById('nums3').innerHTML = ithreer;
-             document.getElementById('nums4').innerHTML = ifourr;
+    <script>
+         function calc(){
+             //Create reference for values entered into Number of Items Sold fields for Items 1 - 4
+             var item1v = document.getElementById("item1").value;
+             var item2v = document.getElementById("item2").value;
+             var item3v = document.getElementById("item3").value;
+             var item4v = document.getElementById("item4").value;
+             //Store values for items 1-4 and calculate sales total per item (price per item * number of the item sold) 
+             var item1Total = (239.99 * item1v).toFixed(2);
+             var item2Total= (129.75 * item2v).toFixed(2);
+             var item3Total = (99.95 * item3v).toFixed(2);
+             var item4Total = (350.89 * item4v).toFixed(2); 
+             //Write the Number of Items Sold values into the calc table in the quantity sold cells
+             document.getElementById('qty1').innerHTML = item1v;
+             document.getElementById('qty2').innerHTML = item2v;
+             document.getElementById('qty3').innerHTML = item3v;
+             document.getElementById('qty4').innerHTML = item4v;
+             //Write the item sales totals into the calc table totals cells
+             document.getElementById('sales1').innerHTML = item1Total;
+             document.getElementById('sales2').innerHTML = item2Total;
+             document.getElementById('sales3').innerHTML = item3Total;
+             document.getElementById('sales4').innerHTML = item4Total;
+             //Calculate total amount sold and return a floating point number (if value cannot be converted to a number return NaN), if the total is a valid number round total to 2 decimal places
+             var total = item1Total + item2Total + item3Total + item4Total;
+             total = parseFloat(total);
+             total = Math.round(total * 100)/100;
+             //Write the total into calc table cell for Total Amount Sold 
+             document.getElementById('amtSold').innerHTML = total.toFixed(2);
+             //Calculate total weekly earnings amount ($200 per week, plus 9% of gross sales for that week) and return a floating point number and round total to 2 decimal places
+             var wkTotal = parseFloat((total * .09)+ 200);
+             wkTotal = Math.round(wkTotal * 100)/100;
+            //Write the total weekly earnings into the calc table cell for Total Weekly Earnings
+             document.getElementById('wkTotal').innerHTML = wkTotal.toFixed(2);
+            //Provide messaging if any quantity entered is not a number
+            if (isNaN(total)){
+                 document.getElementById('amtSold').innerHTML = "<emphasis>Please enter valid numbers.";
+            }
+            if (total < 0){
+                 document.getElementById('amtSold').innerHTML = " Please enter valid numbers.";
+            }
              
-             document.getElementById('ts1').innerHTML = w;
-             document.getElementById('ts2').innerHTML = x;
-             document.getElementById('ts3').innerHTML = y;
-             document.getElementById('ts4').innerHTML = z;
-             var m =   + (w) +  + (x) +  + (y) +  + (z) ;
-             m = parseFloat(m);
-              m = Math.round(m * 100)/100;
-            
-              document.getElementById('amtSold').innerHTML = m.toFixed(2);
-             
-             var n = ((m * .09))+ +(200);
-              n = parseFloat(n);
-             n = Math.round(n * 100)/100;
-              document.getElementById('wkEarnings').innerHTML = n.toFixed(2);
-             if (isNaN(m)){
-                 alert("Enter numeric values only!")
-             } 
          }
     </script>
         
-        
-        
-        </main>
-        
         <a class="button_back" href="index.html">BACK</a><br>
+
     </div>
     
     <script src="h3_part2.js"></script>
 
 </body>
-
 </html>

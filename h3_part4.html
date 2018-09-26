@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw3.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h3_part1.html">Part 1</a> -
+            <a href="h3_part2.html">Part 2</a> -
+            <a href="h3_part3.html">Part 3</a> -
+            <a class="active" href="h3_part4.html">Part 4</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 3 - Functions</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a href="h3_part1.html">Part 1 - Student Grade Calculator</a></li>
+                <li><a href="h3_part2.html">Part 2 - Total Sales and Earnings</a></li>
+                <li><a href="h3_part3.html">Part 3 - Temperature Converter</a></li>
+                <li><a class="active" href="h3_part4.html">Part 4 - Multiplication Game</a></li>
+            </ul>
+        </section>
+        
+        <main>
+           <details class="active">
+           
+              <div>
+                <p>Computers are playing an increasing role in education. Write a program that will help an elementary school student learn multiplication. Use Math.random to produce two one-digit integers (0-9). It should then display a question such as:</p>
+
+                <p>How much is 6 times 7?</p>
+
+                <p>The student then types the answer into a text field. Your program checks the student's answer. If it is correct, display the string "Very good!" in an alert or directly on the page, and then prompt the user to see whether they wish to continue by using the confirm statement. If true, then generate a new question. If not, then exit the script.</p>
+
+                <p>If the answer to the multiplication question is wrong, display the string "No. Please try again." in an alert or directly on the page, and let the student try the same question again repeatedly until the student finally gets it right. A separate function should be used to generate each new question. This function should be called once when the script begins execution and each time the user answers the question correctly. Note that whether the answer is correct or not, you should clear the answer box after the question is answered.</p>
+              </div>
+           
+           </details>
+                 <form id="aForm">
+                    <p id="question"></p>
+                    <input name="name" type="text" size="5"> 
+                        <br>      
+                    <button class="botton_form" type="button" onclick="timesIt()">Check</button>
+                </form>
+                <div id="results"></div>
+            
+                <script>
+                num1=Math.floor(Math.random()* 10 + 0);
+                num2=Math.floor(Math.random()*10 + 0);
+                document.getElementById("question").innerHTML=num1+" x "+num2+" =";
+
+
+
+
+                function timesIt() {
+                var x,y,name,a,b,answer;
+
+                x=document.getElementById("aForm") ;
+                y=x.elements["name"].value;
+
+                    if (y==num1*num2) {
+                //document.getElementById("results").innerHTML="Very good!";
+                   alert("Very good! Click ok if you wish to continue.");
+                    window.location.reload();
+
+                    } 
+                     else {
+                //document.getElementById("results").innerHTML="No. Please try again.";
+                        alert("No. Please try again. Click ok if you wish to continue.")
+                        document.getElementById("aForm").reset();
+                        }
+                }
+             
+            </script>
+            
+            <a class="button_back" href="index.html">BACK</a><br>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a  href="h3_part1.html">Part 1</a> -
+            <a href="h3_part2.html">Part 2</a> -
+            <a class="active" href="h3_part3.html">Part 3</a> -
+            <a href="h3_part4.html">Part 4</a>
+        </nav>
+        <header>
+            <h1>CNIT 133 Homework 3 - Functions</h1>
+        </header>
+
+        <section>
+            <ul>
+                <li><a href="h3_part1.html">Part 1 - Student Grade Calculator</a></li>
+                <li><a href="h3_part2.html">Part 2 - Total Sales and Earnings</a></li>
+                <li><a class="active" href="h3_part3.html">Part 3 - Temperature Converter</a></li>
+                <li><a href="h3_part4.html">Part 4 - Multiplication Game</a></li>
+            </ul>
+        </section>
+        <header>
+            <h2>Celsius and Fahrenheit Converter</h2>
+        </header>
+        <main>          
+            <form name="conversionForm">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Fahrenheit</td>
+                            <td>
+                                <input name="fTemp" id="fTemp" type="text" />
+                            </td>
+                            <td>
+                                <button type="button" onclick="convertToC();return false">Convert to Celsius</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Celsius</td>
+                            <td>
+                                <input name="cTemp" id="cTemp" type="text" />
+                            </td>
+                            <td>
+                                <button type="button" onclick="convertToF();return false">Convert to Fahrenheit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+       
+               <script>
+           function convertToC() {
+                var fTempVal = parseFloat(document.getElementById('fTemp').value);
+                var cTempVal = (fTempVal - 32) * (5 / 9);
+                document.getElementById('cTemp').value = cTempVal;
+                return false;
+            }
+
+            function convertToF() {
+                var cTempVal = parseFloat(document.getElementById('cTemp').value);
+                var fTempVal = (cTempVal * (9 / 5)) + 32;
+                console.log(fTempVal);
+                document.getElementById('fTemp').value = fTempVal;
+                return false;
+            }
+            </script> 
+        </main>
+        <a class="button_back" href="index.html">BACK</a><br>
+    </div>
+    
+</body>
+
+</html>
