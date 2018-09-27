@@ -48,21 +48,21 @@
                     <p id="question"></p>
                     <input name="name" type="text" size="5"> 
                         <br>      
-                    <button class="botton_form" type="button" onclick="timesIt()">Check</button>
+                    <button class="botton_form" type="button" onclick="multiplyIt()">Check</button>
                 </form>
                 <div id="results"></div>
             
                 <p><a class="button_back" href="index.html">BACK</a></p>
 
                 <script>
-                num1=Math.floor(Math.random()* 10 + 0);
-                num2=Math.floor(Math.random()*10 + 0);
-                document.getElementById("question").innerHTML=num1+" x "+num2+" =";
+                num1=Math.floor(Math.random() * 10 + 0);
+                num2=Math.floor(Math.random() * 10 + 0);
+                document.getElementById("question").innerHTML = num1 + " x " + num2 + " =";
 
 
 
 
-                function timesIt() {
+                function multiplyIt() {
                 var x,y,name,a,b,answer;
 
                 x=document.getElementById("aForm") ;
@@ -76,7 +76,7 @@
                     } 
                      else {
                 //document.getElementById("results").innerHTML="No. Please try again.";
-                        alert("No. Please try again. Click ok if you wish to continue.")
+                        alert("No. Please try again. Click ok if you wish to continue.");
                         document.getElementById("aForm").reset();
                         }
                 }
