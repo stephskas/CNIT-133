@@ -80,35 +80,41 @@
         <main>
         
             <form id="salesForm">
-                    <label for="repName"><h3>Sales Representative Name:</h3> </label><input type="text" id="repName" name="repname" title="Please make sure that the salesperson&apos;s name is spelled correctly">
+                    <label for="repName"><h3>Sales Representative Name:</h3> </label><input type="text" id="repName" name="repName" title="Please make sure that the salesperson&apos;s name is spelled correctly">
                     <h3>Number of Items Sold:</h3>
                     <table id="salesTable">
                         <tr>
-                            <th>ITEM1:</th>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item1" onchange="calc()"></td>
+                            <td>ITEM1:</td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item1"></td>
                         </tr>
                         <tr>
-                            <th>ITEM2:</th>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item2" onchange="calc()"></td>
+                            <td>ITEM2:</td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item2"></td>
                         </tr>  
                         <tr>
-                            <th>ITEM3:</th>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item3" onchange="calc()"></td>
+                            <td>ITEM3:</td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item3"></td>
                         </tr>
                         <tr>
-                            <th>ITEM4:</th>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item4" onchange="calc()"></td>
+                            <td>ITEM4:</td>
+                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item4"></td>
                         </tr>
                   </table>
-             <input type="button" value="submit" class="button_form" id="submit" onclick="calc()">
-             <input type="reset"  value="reset" class="button_form" onclick="location.reload()">
+                
+             <p id = "errorMsg"></p> 
+                 
+             <input type="button" value="submit" class="button_form" id="submit" onclick="addRep();calc();">
+             <input type="reset"  value="reset" class="button_form" onclick="location.reload();">
         </form>
         <table id="calcTable">
             <tr>
-            <th>ITEM#:</th>
-            <th>PRICE:</th>
-            <th class="qty">QUANTITY SOLD:</th>
-            <th class="total">TOTAL:</th>
+            <td colspan="4"><p id="displayRep"></p></td>    
+            </tr>
+            <tr>
+            <td>ITEM#:</td>
+            <td>PRICE:</td>
+            <td class="qty">QUANTITY SOLD:</td>
+            <td class="total">TOTAL:</td>
             </tr>
             <tr>
             <td>1</td>
@@ -135,57 +141,69 @@
             <td><div name="sales4" id="sales4"></div></td>
             </tr>
             <tr>
-            <td colspan="2"><p>Total Amount Sold:</p></td>
-            <td rowspan><div name="amtSold" id="amtSold"></div></td>
+            <td colspan="3"><p class="totals" >Total Amount Sold:</p></td>
+            <td rowspan><div name="amtSold" class="totals" id="amtSold"></div></td>
             </tr>
             <tr>
-            <td colspan="2">Total Weekly Earnings:</td>
+            <td colspan="3"><p>Total Weekly Earnings:</p></td>
             <td><div name="wkTotal" id="wkTotal"></div></td>
             </tr>
         </table> 
     </main>
    
     <script>
+        //Display the Sales Representative Name on submit
+        function addRep() {
+                var repName = document.getElementById("repName").value;
+                document.getElementById("displayRep").innerHTML = repName;
+         }
+        
          function calc(){
              //Create reference for values entered into Number of Items Sold fields for Items 1 - 4
              var item1v = document.getElementById("item1").value;
              var item2v = document.getElementById("item2").value;
              var item3v = document.getElementById("item3").value;
              var item4v = document.getElementById("item4").value;
-             //Store values for items 1-4 and calculate sales total per item (price per item * number of the item sold) 
-             var item1Total = (239.99 * item1v).toFixed(2);
-             var item2Total= (129.75 * item2v).toFixed(2);
-             var item3Total = (99.95 * item3v).toFixed(2);
-             var item4Total = (350.89 * item4v).toFixed(2); 
-             //Write the Number of Items Sold values into the calc table in the quantity sold cells
-             document.getElementById('qty1').innerHTML = item1v;
-             document.getElementById('qty2').innerHTML = item2v;
-             document.getElementById('qty3').innerHTML = item3v;
-             document.getElementById('qty4').innerHTML = item4v;
-             //Write the item sales totals into the calc table totals cells
-             document.getElementById('sales1').innerHTML = item1Total;
-             document.getElementById('sales2').innerHTML = item2Total;
-             document.getElementById('sales3').innerHTML = item3Total;
-             document.getElementById('sales4').innerHTML = item4Total;
-             //Calculate total amount sold and return a floating point number (if value cannot be converted to a number return NaN), if the total is a valid number round total to 2 decimal places
-             var total = item1Total + item2Total + item3Total + item4Total;
-             total = parseFloat(total);
-             total = Math.round(total * 100)/100;
-             //Write the total into calc table cell for Total Amount Sold 
-             document.getElementById('amtSold').innerHTML = total.toFixed(2);
-             //Calculate total weekly earnings amount ($200 per week, plus 9% of gross sales for that week) and return a floating point number and round total to 2 decimal places
-             var wkTotal = parseFloat((total * .09)+ 200);
-             wkTotal = Math.round(wkTotal * 100)/100;
-            //Write the total weekly earnings into the calc table cell for Total Weekly Earnings
-             document.getElementById('wkTotal').innerHTML = wkTotal.toFixed(2);
-            //Provide messaging if any quantity entered is not a number
-            if (isNaN(total)){
-                 document.getElementById('amtSold').innerHTML = "<emphasis>Please enter valid numbers.";
+            //Provide messaging if any values entered Number of Items Sold fields for Items 1 - 4 is not a number
+            if (isNaN(item1v || item2v || item3v || item4v)){
+                 document.getElementById('errorMsg').innerHTML = "<emphasis>Please enter numbers only.";
             }
-            if (total < 0){
-                 document.getElementById('amtSold').innerHTML = " Please enter valid numbers.";
+            //Provide messaging if any values entered Number of Items Sold fields for Items 1 - 4 is less than zero
+            else if ((item1v < 0 || item2v < 0 || item3v < 0 || item4v < 0) ){
+                 document.getElementById('errorMsg').innerHTML = " Please enter positive numbers only.";
             }
-             
+
+             else {
+                 //Write the Number of Items Sold values into the calc table in the quantity sold cells
+                 document.getElementById("qty1").innerHTML = Math.floor(item1v);
+                 document.getElementById("qty2").innerHTML = Math.floor(item2v);
+                 document.getElementById("qty3").innerHTML = Math.floor(item3v);
+                 document.getElementById("qty4").innerHTML = Math.floor(item4v);
+                
+                 //Store values for items 1-4 and calculate sales total per item (price per item * number of the item sold) 
+                 var item1Total = parseInt(239.99 * item1v).toFixed(2);
+                 var item2Total= parseInt(129.75 * item2v).toFixed(2);
+                 var item3Total = parseInt(99.95 * item3v).toFixed(2);
+                 var item4Total = parseInt(350.89 * item4v).toFixed(2); 
+
+                 //Calculate total amount sold and return a floating point number (if value cannot be converted to a number return NaN), if the total is a valid number round total to 2 decimal places, + operator returns the numeric representation of the object
+                 var total = +item1Total + +item2Total + +item3Total + +item4Total;
+                 total = parseInt(total);
+                 
+                 //Write the item sales totals into the calc table totals cells
+                 document.getElementById("sales1").innerHTML = item1Total;
+                 document.getElementById("sales2").innerHTML = item2Total;
+                 document.getElementById("sales3").innerHTML = item3Total;
+                 document.getElementById("sales4").innerHTML = item4Total;
+                 
+                 //Write the total into calc table cell for Total Amount Sold 
+                 document.getElementById("amtSold").innerHTML = total.toFixed(2);
+                 //Calculate total weekly earnings amount ($200 per week, plus 9% of gross sales for that week) and return a floating point number and round total to 2 decimal places
+                 var wkTotal = parseFloat((total * .09)+ 200);
+                 wkTotal = Math.round(wkTotal * 100)/100;
+                //Write the total weekly earnings into the calc table cell for Total Weekly Earnings
+                document.getElementById('wkTotal').innerHTML = wkTotal.toFixed(2);
+             }
          }
     </script>
         
@@ -193,7 +211,5 @@
 
     </div>
     
-    <script src="h3_part2.js"></script>
-
 </body>
 </html>

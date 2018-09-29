@@ -14,6 +14,8 @@ h1 {
     padding-top: 25px;
 }
 h3 {
+    font-weight:100;
+    letter-spacing: 1px;
     color: #f8a043;
     padding: 0px;
     margin: 25px 0px 2px 0px;
@@ -26,6 +28,13 @@ ul {
     list-style-type: none;
 }
 
+th {
+     color: #f8a043;   
+}
+th, td {
+    text-align: right;
+    letter-spacing: 1px;
+}
 nav {
     padding-top:10px;
     color:#444;
@@ -74,12 +83,8 @@ div {
     font-style: italic;
 }
 
-.itemNum {
-    text-align: center;
-}
-
-th.qty {
-    padding-right: 30px;
+th.qty, th.total {
+    padding-left: 30px;
 }
 
 #flip {
@@ -112,9 +117,23 @@ th.qty {
     width: 150px;
 }
 
+#calcTable {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
 #repName {
     width: 250px;
     margin-botom: 20px;
+}
+#displayRep {
+    color: #d3e4f1;
+    margin: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 /* -----------------BUTTONS------------------ */
 
@@ -122,7 +141,7 @@ th.qty {
     background: #444;
     border-radius: 5px;
     padding: 5px 30px;
-    margin: 10px;
+    margin-top: 20px;
     border: 1px solid lightgray;
     color: #fff;
     letter-spacing: 1.5px;
