@@ -108,7 +108,7 @@
         </form>
         <table id="calcTable">
             <tr>
-            <td colspan="4"><p id="displayRep"></p></td>    
+            <td colspan="4" id="displayRep"></td>    
             </tr>
             <tr>
             <td>ITEM#:</td>
@@ -189,6 +189,7 @@
                  //Calculate total amount sold and return a floating point number (if value cannot be converted to a number return NaN), if the total is a valid number round total to 2 decimal places, + operator returns the numeric representation of the object
                  var total = +item1Total + +item2Total + +item3Total + +item4Total;
                  total = parseInt(total);
+                 total = Math.round(total * 100)/100;
                  
                  //Write the item sales totals into the calc table totals cells
                  document.getElementById("sales1").innerHTML = item1Total;
