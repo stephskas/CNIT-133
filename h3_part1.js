@@ -1,13 +1,13 @@
 // jQuery show/hide panel
         $(document).ready(function(){
-        $("#flip").click(function(){
-            $("#panel").slideToggle("slow");
-            });
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+                });
         });
     
         function myfinalScore() {
 // Declare variables
-            var hwAvg, midtermScore, finalScore, acr, num1;
+            var hwAvg, midtermScore, finalScore, acr, num1, finalAvg;
             hwAvg = document.getElementById("hwAverageInput").value;
             midtermScore = document.getElementById("midtermScoreInput").value;
             finalScore = document.getElementById("finalScoreInput").value;
