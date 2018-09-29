@@ -16,12 +16,12 @@
             finalAvg = (.5 * hwAvg) + (.2 * midtermScore) + (.2 * finalScore) + (.1 * acr);
             num1 = Math.round(finalAvg);
 // If the Final Average is not a number display error message 
-            if (isNaN(hwAvg) || isNaN(midtermScore) || isNaN(finalScore) || isNaN(acr) || hwAvg === "" || midtermScore === "" || finalScore === "" || acr === "" ) {
-                document.getElementById("myFinalGrade").innerHTML = "Please submit numbers only";
+            if (hwAvg > 100 || hwAvg < 0 || midtermScore < 0 || midtermScore > 100 || finalEx < 0 || finalEx > 100 || acr < 0 || acr > 100)  {
+                document.getElementById("myFinalGrade").innerHTML = "Please check that your entered values are between 0-100.";
             }
 // If the Final Average is below zero or greater than 100 display error message 
-            else if (hwAvg > 100 || hwAvg < 0 || midtermScore < 0 || midtermScore > 100 || finalEx < 0 || finalEx > 100 || acr < 0 || acr > 100)  {
-                document.getElementById("myFinalGrade").innerHTML = "Please check that your entered values are between 0-100.";
+            else if (isNaN(hwAvg) || isNaN(midtermScore) || isNaN(finalScore) || isNaN(acr) || hwAvg === "" || midtermScore === "" || finalScore === "" || acr === "" ) {
+                document.getElementById("myFinalGrade").innerHTML = "Please submit numbers only";
             }
 // Determine and display final grade
             else if(finalAvg >= 90 && finalAvg<= 100){
