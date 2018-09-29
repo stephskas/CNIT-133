@@ -1,10 +1,4 @@
-// jQuery show/hide panel
-        $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#panel").slideToggle("slow");
-                });
-        });
-    
+  
         function myfinalScore() {
 // Declare variables
             var hwAvg, midtermScore, finalScore, acr, num1, finalAvg;
@@ -41,7 +35,6 @@
             }
             else if(finalAvg >= 0 && finalAvg <= 59){
                  document.getElementById("myFinalGrade").innerHTML = "Your final average is: "  + num1 + ". Your grade is: 'F'. You must retake the course!";
-                
             }
         }
 

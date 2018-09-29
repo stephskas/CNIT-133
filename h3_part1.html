@@ -8,50 +8,6 @@
     <meta name="author" content="Stephanie Sakai" />
     <link rel="stylesheet" type="text/css" href="hw3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-        $("#flip").click(function(){
-            $("#panel").slideToggle("slow");
-            });
-        });
-    
-        function myfinalScore() {
-            var hwAvg, midtermScore, finalScore, acr, num1;
-            hwAvg = document.getElementById("hwAverageInput").value;
-            midtermScore = document.getElementById("midtermScoreInput").value;
-            finalScore = document.getElementById("finalScoreInput").value;
-            acr = document.getElementById("acrInput").value;
-            finalAvg = (.5 * hwAvg) + (.2 * midtermScore) + (.2 * finalScore) + (.1 * acr);
-            num1 = Math.round(finalAvg);
-            if (isNaN(num1)) {
-                document.getElementById("myFinalGrade").innerHTML = "Please submit numbers only";
-            }
-            else if(finalAvg >= 90 && finalAvg<= 100){
-                 document.getElementById("myFinalGrade").innerHTML = "Your score is: " + num1 + ". Your grade is: 'A'. Congratulations!";
-               
-            }
-            else if(finalAvg >= 80 && finalAvg <= 89){
-                 document.getElementById("myFinalGrade").innerHTML = "Your final average is: " + num1 + ". Your grade is: 'B'";
-                
-            }
-            else if(finalAvg >= 70 && finalAvg <= 79){
-                 document.getElementById("myFinalGrade").innerHTML = "Your final average is: " + num1 + ". Your grade is: 'C'";
-                
-            }
-            else if(finalAvg >= 60 && finalAvg <= 69){
-                 document.getElementById("myFinalGrade").innerHTML = "Your final average is: " + num1 + ". Your grade is: 'D'. You must retake the course!";
-                
-            }
-            else if(finalAvg >= 0 && finalAvg <= 59){
-                 document.getElementById("myFinalGrade").innerHTML = "Your final average is: "  + num1 + ". Your grade is: 'F'. You must retake the course!";
-                
-            }
-            else if(finalAvg < 0 || finalAvg > 100) {
-                document.getElementById("myFinalGrade").innerHTML = "Please check that your entered values are between 0-100.";
-            }
-        }
-    </script>
-
 </head>
 
 <body>
@@ -135,8 +91,11 @@
         </main>
         
         <a class="button_back" href="index.html">BACK</a><br>
+        
     </div>
+    
     <script src="h3_part1.js"></script>
+    
 </body>
 
 </html>
