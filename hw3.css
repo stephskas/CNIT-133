@@ -22,6 +22,8 @@ h3 {
 }
 p {
     font-weight: 100;
+    margin: 0px;
+    padding: 0px;
 }
 
 ul {
@@ -34,6 +36,7 @@ th {
 th, td {
     text-align: right;
     letter-spacing: 1px;
+    padding-right: 10px;
 }
 nav {
     padding-top:10px;
@@ -86,7 +89,9 @@ div {
 th.qty, th.total {
     padding-left: 30px;
 }
-
+textarea {
+    background-color: black;
+}
 #flip {
     margin-top: 20px;
     padding: 5px;
@@ -129,11 +134,14 @@ th.qty, th.total {
     margin-botom: 20px;
 }
 #displayRep {
-    color: #d3e4f1;
-    margin: 5px;
+    color: #fff;
+    margin: 0px 0px 15px 0px;
     text-align: left;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.25em;
+}
+.totals {
+    margin-top: 15px;
 }
 /* -----------------BUTTONS------------------ */
 
