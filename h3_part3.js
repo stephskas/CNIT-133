@@ -1,6 +1,6 @@
 // Convert Fahrenheit value to Celsius
 function convertToC() {
-    var fahrenheit = parseFloat(document.getElementById('fTemp').value);
+    var fahrenheit = document.getElementById('fTemp').value;
     
     var celsius = (fahrenheit - 32) * (5 / 9);
 // Validate celsius and provide messaging if celsius is not a number    
@@ -16,7 +16,7 @@ function convertToC() {
 // Convert Celsius value to Fahrenheit
 function convertToF() {
     
-    var celsius = parseFloat(document.getElementById('cTemp').value);
+    var celsius = document.getElementById('cTemp').value;
     
     var fahrenheit = (celsius * (9 / 5)) + 32;
     
