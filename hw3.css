@@ -84,9 +84,16 @@ div {
     font-style: italic;
 }
 
+.align-left {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
 th.qty, th.total {
     padding-left: 30px;
 }
+
 textarea {
     background-color: black;
 }
