@@ -55,30 +55,20 @@
                                 <button type="button" onclick="convertToF();return false">Convert to Fahrenheit</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td colspan="2"> </td>
+                            <td>
+                                <input type="reset" value="Reset" id="reset" onclick="window.location.reload();">
+                            </td>    
+                        </tr>
                     </tbody>
                 </table>
             </form>
-       
-               <script>
-           function convertToC() {
-                var fTempVal = parseFloat(document.getElementById('fTemp').value);
-                var cTempVal = (fTempVal - 32) * (5 / 9);
-                document.getElementById('cTemp').value = cTempVal;
-                return false;
-            }
-
-            function convertToF() {
-                var cTempVal = parseFloat(document.getElementById('cTemp').value);
-                var fTempVal = (cTempVal * (9 / 5)) + 32;
-                console.log(fTempVal);
-                document.getElementById('fTemp').value = fTempVal;
-                return false;
-            }
-            </script> 
         </main>
         <a class="button_back" href="index.html">BACK</a><br>
     </div>
-    
+
+<script src="h3_part3.js"></script>
 </body>
 
 </html>
