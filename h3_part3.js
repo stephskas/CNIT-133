@@ -1,22 +1,14 @@
-
-// Validate input values
-$(document).ready(function(){
-    $("#conversionForm").validate({
-	  rules: 
-	  {
-		fTemp: { number: true},
-        cTemp: { number: true}
-	  }
-	});	  
-});
 // Convert Fahrenheit value to Celsius
 function convertToC() {
     var fahrenheit = parseFloat(document.getElementById('fTemp').value);
     
     var celsius = (fahrenheit - 32) * (5 / 9);
-    
+// Validate celsius and provide messaging if celsius is not a number    
+    if (isNaN(celsius)) {
+        document.getElementById("errorMsg").innerHTML = " Please enter numbers only.";
+    } else {
 // Display Celsius temperature with one digit after decimal place
-    document.getElementById('cTemp').value = celsius.toFixed(1);
+    document.getElementById('cTemp').value = celsius.toFixed(1) + \u00B0 + "F";
     
     return false;
 }
@@ -28,8 +20,12 @@ function convertToF() {
     
     var fahrenheit = (celsius * (9 / 5)) + 32;
     
+// Validate celsius and provide messaging if celsius is not a number    
+    if (isNaN(fahrenheit)) {
+        document.getElementById("errorMsg").innerHTML = " Please enter numbers only.";
+    } else {
  // Display Fahrenheit temperature with one digit after decimal place   
-    document.getElementById('fTemp').value = fahrenheit.toFixed(1);
+    document.getElementById('fTemp').value = fahrenheit.toFixed(1) + \u00B0 + "C";
     
     return false;
 }
