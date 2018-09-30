@@ -17,7 +17,6 @@ function convertToF() {
     var celsius = document.getElementById('cTemp').value;
     
     var fahrenheit = (celsius * (9 / 5)) + 32;
-    
 // Validate celsius and provide messaging if celsius is not a number    
     if (isNaN(fahrenheit)) {
         document.getElementById("errorMsgF").innerHTML = "Please input a numeric value.";
