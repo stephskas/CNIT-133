@@ -34,25 +34,27 @@
             <h2>Celsius and Fahrenheit Converter</h2>
         </header>
         <main>          
-            <form name="conversionForm">
+            <form name="conversionForm" id="conversionForm">
                 <table>
                     <tbody>
                         <tr>
                             <td>Fahrenheit</td>
                             <td>
-                                <input name="fTemp" id="fTemp" type="text" />
+                                <input name="fTemp" id="fTemp" type="text" onchange="validate()"
                             </td>
                             <td>
                                 <button type="button" onclick="convertToC();return false">Convert to Celsius</button>
+                                <div><p id="errorMsg"></p></div>
                             </td>
                         </tr>
                         <tr>
                             <td>Celsius</td>
                             <td>
-                                <input name="cTemp" id="cTemp" type="text" />
+                                <input name="cTemp" id="cTemp" type="text" onchange="validate()"/>
                             </td>
                             <td>
-                                <button type="button" onclick="convertToF();return false">Convert to Fahrenheit</button>
+                                <button type="button" onclick="convertToF();return false">Convert to Fahrenheit</button>                       <div><p id="errorMsg"></p></div>
+
                             </td>
                         </tr>
                         <tr>

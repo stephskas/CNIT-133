@@ -3,7 +3,7 @@ var fTemp = document.getElementById('fTemp').value;
 var cTemp = document.getElementById('fTemp').value;
 // Validate input values to make sure field isn't empty
 function validate() {
-    if (isNaN(fTemp || cTemp || item3v || item4v)){
+    if (isNaN(fTemp || cTemp)){
     document.getElementById('errorMsg').innerHTML = "<emphasis>Please enter numbers only.";
     }
 }
