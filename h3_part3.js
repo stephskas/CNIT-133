@@ -8,11 +8,11 @@ function convertToC() {
         document.getElementById("errorMsg").innerHTML = " Please enter numbers only.";
     } else {
 // Display Celsius temperature with one digit after decimal place
-    document.getElementById('cTemp').value = celsius.toFixed(1) + \u00B0 + "F";
+    document.getElementById('cTemp').value = celsius.toFixed(1);
     
     return false;
+    }
 }
-
 // Convert Celsius value to Fahrenheit
 function convertToF() {
     
@@ -25,7 +25,8 @@ function convertToF() {
         document.getElementById("errorMsg").innerHTML = " Please enter numbers only.";
     } else {
  // Display Fahrenheit temperature with one digit after decimal place   
-    document.getElementById('fTemp').value = fahrenheit.toFixed(1) + \u00B0 + "C";
+    document.getElementById('fTemp').value = fahrenheit.toFixed(1);
     
     return false;
+    }
 }
