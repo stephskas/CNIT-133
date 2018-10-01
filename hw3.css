@@ -85,7 +85,7 @@ div {
     font-style: italic;
 }
 
-.index {
+div.index ul {
     margin: 20px;
     text-align: left;
 }
