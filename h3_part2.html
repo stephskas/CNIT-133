@@ -29,14 +29,14 @@
             <a href="h3_part3.html">Part 3</a> -
             <a href="h3_part4.html">Part 4</a>
         </nav>
-        <section>
+
             <ul>
                 <li><a href="h3_part1.html">Part 1 - Student Grade Calculator</a></li>
                 <li><a class="active" href="h3_part2.html">Part 2 - Total Sales and Earnings</a></li>
                 <li><a href="h3_part3.html">Part 3 - Temperature Converter</a></li>
                 <li><a href="h3_part4.html">Part 4 - Multiplication Game</a></li>
             </ul>
-        </section>
+
         <header>
             <h1>Weekly Sales and Earnings</h1>
         </header>
@@ -46,7 +46,7 @@
                 <p>
                    A large company pays its salespeople on a commission basis. The salespeople receive $200 per week, plus 9% of their gross sales for that week. For example, a salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9% of $5000, or a total of $650. You have been supplied with a list of the items sold by each salesperson. The value of these items are as follows:
                    
-                <table cellspacing="5">
+                <table>
                 <tbody>
                 <tr>
                 <th>Item</th>
@@ -83,19 +83,19 @@
                     <table id="salesTable">
                         <tr>
                             <td>ITEM1:</td>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item1"></td>
+                            <td><input min="0" type="number" id="item1"></td>
                         </tr>
                         <tr>
                             <td>ITEM2:</td>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item2"></td>
+                            <td><input min="0" type="number" id="item2"></td>
                         </tr>  
                         <tr>
                             <td>ITEM3:</td>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item3"></td>
+                            <td><input min="0" type="number" id="item3"></td>
                         </tr>
                         <tr>
                             <td>ITEM4:</td>
-                            <td><input pattern="^[1-9]\d*$" min="0" type="number" id="item4"></td>
+                            <td><input min="0" type="number" id="item4"></td>
                         </tr>
                   </table>
                 
@@ -117,34 +117,34 @@
             <tr>
             <td>1</td>
             <td>$239.99</td>
-            <td><div name="qty1" id="qty1"></div></td>
-            <td><div id="sales1" name="sales1"></div></td>
+            <td><div id="qty1"></div></td>
+            <td><div id="sales1"></div></td>
             </tr>
             <tr>
             <td>2</td>
             <td>$129.75</td>
-            <td><div name="qty2" id="qty2"></div></td>
-            <td><div name="sales2" id="sales2"></div></td>
+            <td><div id="qty2"></div></td>
+            <td><div id="sales2"></div></td>
             </tr>
             <tr>
             <td>3</td>
             <td>$99.95</td>
-            <td><div name="qty3" id="qty3"></div></td>
-            <td><div name="sales3" id="sales3" ></div></td>
+            <td><div id="qty3"></div></td>
+            <td><div id="sales3" ></div></td>
             </tr>
             <tr>
             <td>4</td>
             <td>$350.89</td>
-            <td><div name="qty4" id="qty4"></div></td>
-            <td><div name="sales4" id="sales4"></div></td>
+            <td><div id="qty4"></div></td>
+            <td><div id="sales4"></div></td>
             </tr>
             <tr>
             <td colspan="3"><p class="totals" >Total Amount Sold:</p></td>
-            <td rowspan><div name="amtSold" class="totals" id="amtSold"></div></td>
+            <td><div class="totals" id="amtSold"></div></td>
             </tr>
             <tr>
             <td colspan="3"><p class="totals">Total Weekly Earnings:</p></td>
-            <td><div name="wkTotal" id="wkTotal"></div></td>
+            <td><div id="wkTotal"></div></td>
             </tr>
         </table> 
     </main>
