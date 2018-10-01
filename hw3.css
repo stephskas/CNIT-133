@@ -84,10 +84,6 @@ div {
     font-style: italic;
 }
 
-.align-left {
-    text-align: left;
-}
-
 th.qty, th.total {
     padding-left: 30px;
 }
@@ -134,7 +130,7 @@ textarea {
 
 #repName {
     width: 250px;
-    margin-botom: 20px;
+    margin-bottom: 20px;
 }
 #displayRep {
     color: #fff;
