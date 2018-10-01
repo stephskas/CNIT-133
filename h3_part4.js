@@ -4,18 +4,16 @@ var game = document.getElementById("game");
 // Generate 2 random numbers
 var num1 = Math.floor(Math.random() * 10);
 var num2 = Math.floor(Math.random() * 10);
+var correctAns = num1 * num2;
 
 function generateNumbers() {
 // Display question   
 document.getElementById("question").innerHTML = num1 + " x " + num2 + " = ";
 }
+function multiply() {
 
-function checkAnswer() {
 // Provide response if the response is correct
     var response = document.getElementById("response").value;
-    // Multiply the 2 random numbers (this will run when the Check Answer button is clicked)
-    var correctAns = num1 * num2;
-    
     if (response == correctAns) {
         alert('test');
     }
