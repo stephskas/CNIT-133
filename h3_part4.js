@@ -15,12 +15,10 @@ document.getElementById("question").innerHTML = num1 + " x " + num2 + " =";
 // Provide response if the response is correct
     if (response == correctAns) {
         results = "Very good! Would you like to play again?";
-        num1 = "";
-        num2 = "";
         }
 // Provide response if the response is not correct
     else {
         results = "No. Please try again.";
-        document.getElementById("game").reset();
+        response = "";
         }
 }

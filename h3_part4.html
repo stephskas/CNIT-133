@@ -44,13 +44,18 @@
            </details>
                 
                 <h3>Multiplication Game</h3>
-                 <form id="game">
-                    <p style="font-size: 2em;" id="question"></p>
-                    <input name="response" id="response" type="number" size="10" style="font-size: 2em;"><br>
-                    <button class="button_form" type="button" style="margin:0px 0px  20px 0px;" onclick="multiply()">Check Answer</button>
-                     <button class="button_form" type="button" style="margin:0px 0px 0px 0px;" onclick="multiply()">Play Again</button>
-                </form>
-                
+                <table>
+                    <tr>
+                        <td><p style="font-size: 2em;" id="question"></p></td>
+                        <td><input name="response" id="response" type="number" size="10" style="font-size: 2em;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <button class="button_form" type="button" style="margin:0px 0px  20px 0px;" onclick="multiply();">Check Answer</button>
+                         <button class="button_form" type="button" style="margin:0px 0px 0px 0px;" onclick="multiply();">Play Again</button>
+                         </td>
+                    </tr>
+                </table>
                 <p id="results"></p>
             
                 <p><a class="button_back" href="index.html">BACK</a></p>
