@@ -14,8 +14,7 @@ function multiply() {
 // Provide response if the response is correct
     var response = document.getElementById("response").value;
     if (response == correctAns) {
-        var result = document.getElementById("result").innerHTML; result = "Very good! Would you like to play again?";
-        document.getElementById("play").innerHTML = "Play Again"; 
+        document.getElementById("result").innerHTML = "Very good! Would you like to play again?";
         }
 // Provide response if the response is not correct
     else {
