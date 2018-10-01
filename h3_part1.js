@@ -1,9 +1,4 @@
-// jQuery show/hide panel
-        $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#panel").slideToggle("slow");
-                });
-        });
+
 
         function myfinalScore() {
 // Declare variables
@@ -15,13 +10,17 @@
 // Calculate Final Average
             finalAvg = (.5 * hwAvg) + (.2 * midtermScore) + (.2 * finalScore) + (.1 * acr);
             num1 = Math.round(finalAvg);
-// If the Final Average is not a number display error message 
+// If the Final Average is below zero or greater than 100 display error message 
             if (hwAvg > 100 || hwAvg < 0 || midtermScore < 0 || midtermScore > 100 || finalScore < 0 || finalScore > 100 || acr < 0 || acr > 100)  {
                 document.getElementById("grade").innerHTML = "Please check that your entered values are between 0-100.";
             }
-// If the Final Average is below zero or greater than 100 display error message 
-            else if (isNaN(hwAvg) || isNaN(midtermScore) || isNaN(finalScore) || isNaN(acr) || hwAvg === "" || midtermScore === "" || finalScore === "" || acr === "" ) {
+// If the Final Average is not a number display error message 
+            else if (isNaN(hwAvg) || isNaN(midtermScore) || isNaN(finalScore) || isNaN(acr)) {
                 document.getElementById("grade").innerHTML = "Please submit numbers only";
+            }
+// If the Final Average is blank display error message 
+            else if (hwAvg === "" || midtermScore === "" || finalScore === "" || acr === "" ) {
+                document.getElementById("grade").innerHTML = "Please enter all requested values";
             }
 // Determine and display final grade
             else if(finalAvg >= 90 && finalAvg<= 100){
