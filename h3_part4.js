@@ -17,7 +17,7 @@ function checkAnswer() {
       
         document.getElementById("game").reset();
 
-             document.getElementById("game").reset();
+             document.getElementById("results").reset();
 
     } 
          else {
