@@ -6,6 +6,7 @@ document.getElementById("question").innerHTML = num1 + " x " + num2 + " = ";
 
 // Multiply the 2 random numbers (this will run when the Check Answer button is clicked){
 function checkAnswer() {
+    alert('test');
 	var answer = parseInt(document.forms["game"].elements["response"].value);
 	var correctAnswer = number1 * number2;	
 
