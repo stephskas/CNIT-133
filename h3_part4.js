@@ -15,11 +15,13 @@ function multiply() {
 // Provide response if the response is correct
     var response = document.getElementById("response").value;
     if (response == correctAns) {
-        document.getElementById("result").innerHTML = "Very good! Would you like to play again?";
+        alert('test');
+    }
+       /* document.getElementById("result").innerHTML = "Very good! Would you like to play again?";
         }
 // Provide response if the response is not correct
     else {
         result = "No. Please try again.";
         response = "";
         }
-}
+} */
