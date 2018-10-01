@@ -14,7 +14,7 @@ function checkAnswer() {
 // Provide response if the response is correct
     var response = document.getElementById("response").value;
     // Multiply the 2 random numbers (this will run when the Check Answer button is clicked)
-    var correctAns = this.num1 * this.num2;
+    var correctAns = num1 * num2;
     
     if (response == correctAns) {
         alert('test');
