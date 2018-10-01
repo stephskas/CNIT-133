@@ -11,11 +11,9 @@
         form = document.getElementById("game") ;
         response = form.elements["responseInput"].value;
 
-        if (response == num1 * num2) {
-            document.getElementById("results").innerHTML= "Very good!";
-            /*alert("Very Good! Click ok if you wish to continue.");
+        if (response==num1*num2) {
+            alert("Very Good! Click ok if you wish to continue.");
             window.location.reload();*/
-
             } 
             else { /*document.getElementById("results").innerHTML="No. Please try again.";*/
                 alert("No. Please try again. Click ok if you wish to continue.")    
