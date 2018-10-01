@@ -8,8 +8,8 @@
     function checkAnswer() {
         var x,y,name,a,b,answer;
 
-        x=document.getElementById("aForm") ;
-        y=x.elements["name"].value;
+        x=document.getElementById("game") ;
+        y=x.elements["response"].value;
 
         if (y==num1*num2) {
             //document.getElementById("results").innerHTML="Very good!";
