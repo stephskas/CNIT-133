@@ -14,13 +14,11 @@ function checkAnswer() {
 
     if (response==num1*num2) {
        document.getElementById("results").innerHTML="Very good!";
-        function delay() {
-            setTimeout(myFunction, 5000);
-                    document.getElementById("game").reset();
+        
+        document.getElementById("responseInput").reset();
+        window.location.reload();
 
-         } 
-
-   
+    } 
     else {
         document.getElementById("results").innerHTML="No. Please try again.";
         
