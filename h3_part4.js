@@ -5,18 +5,22 @@
     document.getElementById("question").innerHTML = num1 + " x " + num2 + " = ";
 
 // Multiply the 2 random numbers (this will run when the Check Answer button is clicked){
-    function checkAnswer() {
-        var form, response,name,a,b,answer;
+    
+function checkAnswer() {
+    var x,y,name,a,b,answer;
 
-        form = document.getElementById("game") ;
-        response = form.elements["responseInput"].value;
+    x=document.getElementById("game") ;
+    y=x.elements["responseInput"].value;
 
-        if (response==num1*num2) {
-            alert("Very Good! Click ok if you wish to continue.");
-            window.location.reload();*/
-            } 
-            else { /*document.getElementById("results").innerHTML="No. Please try again.";*/
-                alert("No. Please try again. Click ok if you wish to continue.")    
-                document.getElementById("game").reset();
-            }
+    if (y==num1*num2) {
+    //document.getElementById("results").innerHTML="Very good!";
+        alert("Very Good! Click ok if you wish to continue.");
+        window.location.reload();
+
+    } 
+         else {
+    //document.getElementById("results").innerHTML="No. Please try again.";
+             alert("No. Please try again. Click ok if you wish to continue.")
+            document.getElementById("game").reset();
+    }
 }
