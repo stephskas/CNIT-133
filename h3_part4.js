@@ -11,10 +11,10 @@
         x=document.getElementById("game") ;
         y=x.elements["response"].value;
 
-        if (y==num1*num2) {
-            //document.getElementById("results").innerHTML="Very good!";
-            alert("Very Good! Click ok if you wish to continue.");
-            window.location.reload();
+        if (y == num 1 * num2) {
+            document.getElementById("results").innerHTML= "Very good!";
+            /*alert("Very Good! Click ok if you wish to continue.");
+            window.location.reload();*/
 
             } 
                  else { //document.getElementById("results").innerHTML="No. Please try again.";

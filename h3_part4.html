@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="hw4.css">
 </head>
 
-<body onload="generateNumbers()">
+<body>
     <div class="container">
         <nav>
             <a href="h3_part1.html">Part 1</a> -
@@ -51,6 +51,9 @@
                             <td style="margin: 10px; text-align: left;"><input name="response" id="response" type="number" size="30" style="font-size: 1.75em; font-weight: bold;"></td>
                         </tr>
                         <tr>
+                            <td colspan="2"><p id="results"></p></td>
+                        </tr>
+                        <tr>
                             <td colspan="2">
                             <button class="button_form" type="button" style="margin:0px 0px 20px 0px;" onclick="checkAnswer();">Check Answer</button>
                             <button class="button_form" type="button" style="margin:0px 0px 0px 0px;" onclick="window.location.reload();">Play Again</button>
@@ -58,7 +61,6 @@
                         </tr>
                     </table>
                 </form>
-                <p id="results"></p>
             
                 <p><a class="button_back" href="index.html">BACK</a></p>
                 
