@@ -7,12 +7,12 @@
 // Multiply the 2 random numbers (this will run when the Check Answer button is clicked){
     
 function checkAnswer() {
-    var x,y,name,a,b,answer;
+    var form,response,responseInput,results;
 
-    x=document.getElementById("game") ;
-    y=x.elements["responseInput"].value;
+    form=document.getElementById("game") ;
+    response=form.elements["responseInput"].value;
 
-    if (y==num1*num2) {
+    if (response==num1*num2) {
     //document.getElementById("results").innerHTML="Very good!";
         alert("Very Good! Click ok if you wish to continue.");
         window.location.reload();
