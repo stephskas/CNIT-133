@@ -32,7 +32,6 @@
         
         <main>
            <details class="active">
-           
               <div>
                 <p>Computers are playing an increasing role in education. Write a program that will help an elementary school student learn multiplication. Use Math.random to produce two one-digit integers (0-9). It should then display a question such as:</p>
 
@@ -42,14 +41,16 @@
 
                 <p>If the answer to the multiplication question is wrong, display the string "No. Please try again." in an alert or directly on the page, and let the student try the same question again repeatedly until the student finally gets it right. A separate function should be used to generate each new question. This function should be called once when the script begins execution and each time the user answers the question correctly. Note that whether the answer is correct or not, you should clear the answer box after the question is answered.</p>
               </div>
-           
            </details>
-                 <form id="aForm">
+                
+                <h3>Multiplication Game</h3>
+                 <form id="game">
                     <p id="question"></p>
-                    <input name="name" type="text" size="5"> 
-                        <br>      
-                    <button class="botton_form" type="button" onclick="multiplyIt()">Check</button>
+                    <input name="response" id="response" type="number" size="5">      
+                    <button class="button_form" type="button" onclick="multiply()">Check Answer</button>
+                     <button class="button_form" type="button" onclick="window.location.reload();">Play Again</button>
                 </form>
+                
                 <div id="results"></div>
             
                 <p><a class="button_back" href="index.html">BACK</a></p>

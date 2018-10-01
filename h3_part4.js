@@ -1,24 +1,23 @@
-
-num1=Math.floor(Math.random() * 10 + 0);
-num2=Math.floor(Math.random() * 10 + 0);
-    
+// Generate 2 random numbers
+var num1 = Math.floor(Math.random() * 10);
+var num2 = Math.floor(Math.random() * 10);
+// Display question   
 document.getElementById("question").innerHTML = num1 + " x " + num2 + " =";
-
-function multiplyIt() {
-    var x, y, name, a, b, answer;
-    x = document.getElementById("aForm");
-    y = x.elements["name"].value;
-
-    if (y==num1*num2) {
-//document.getElementById("results").innerHTML="Very good!";
-
-        alert("Very good! Click ok if you wish to continue.");
-        window.location.reload();
-    } 
+// Multiply the 2 random numbers (this will run when the Check Answer button is clicked)
+function multiply() {
+// Initialize variables
+    var game = document.getElementById("game");
+    var response = document.getElementById("response");
+    var correctAns = num1 * num2;
+    var response = document.getElementById("response").innerHTML;
+// Provide response if the response is correct
+    if (response == correctAns) {
+        response = "Very good! Would you like to play again?";
+        num1 = "";
+        num2 = "";
+        }
     else {
-//document.getElementById("results").innerHTML="No. Please try again.";
-        alert("No. Please try again. Click ok if you wish to continue.");
-        
-        document.getElementById("aForm").reset();
+        response = "No. Please try again.";
+        document.getElementById("game").reset();
         }
 }
