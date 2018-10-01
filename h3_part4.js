@@ -15,8 +15,7 @@ function checkAnswer() {
     if (response==num1*num2) {
        document.getElementById("results").innerHTML="Very good!";
       
-        document.getElementById("game").reset();
-
+    document.getElementById("game").reset();
 
     } 
          else {
