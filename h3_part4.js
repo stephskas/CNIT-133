@@ -8,7 +8,7 @@ document.getElementById("question").innerHTML = num1 + " x " + num2 + " = ";
 function checkAnswer() {
     alert('test');
 	var answer = parseInt(document.forms["game"].elements["response"].value);
-	var correctAnswer = number1 * number2;	
+	var correctAnswer = num1 * num2;	
 
 	if (correctAnswer == answer) {
 		document.getElementById('results').innerHTML = ("Very Good! Do you want to play Again?");
