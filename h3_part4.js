@@ -13,14 +13,14 @@ function checkAnswer() {
     response=form.elements["responseInput"].value;
 
     if (response==num1*num2) {
-    //document.getElementById("results").innerHTML="Very good!";
-        alert("Very Good! Click ok if you wish to continue.");
+       document.getElementById("results").innerHTML="Very good!";
+
         window.location.reload();
 
     } 
-         else {
-    //document.getElementById("results").innerHTML="No. Please try again.";
-             alert("No. Please try again. Click ok if you wish to continue.")
-            document.getElementById("game").reset();
+    else {
+        document.getElementById("results").innerHTML="No. Please try again.";
+        
+        document.getElementById("game").reset();
     }
 }
