@@ -14,12 +14,14 @@ function checkAnswer() {
 
     if (response==num1*num2) {
        document.getElementById("results").innerHTML="Very good!";
+      
+        document.getElementById("game").reset();
 
         window.location.reload();
 
     } 
-    else {
-        document.getElementById("results").innerHTML="No. Please try again.";
-        document.getElementById("game").reset();
+         else {
+    document.getElementById("results").innerHTML="No. Please try again.";
+             document.getElementById("game").reset();
     }
 }
