@@ -26,8 +26,6 @@ p {
 
 ul {
     list-style-type: none;
-    margin:0;
-    padding:0;
 }
 
 th {
@@ -61,10 +59,11 @@ input {
     margin: 8px 0;
 }
 
-main, section {
+main {
     margin: 20px;
     text-align: left;
 }
+
 div {
     color: #fff;
 }
@@ -84,6 +83,11 @@ div {
 
 .italic {
     font-style: italic;
+}
+
+.index {
+    margin: 20px;
+    text-align: left;
 }
 
 th.qty, th.total {
