@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework 4 - Looping Statements</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw4.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="h4_part1.html">Part 1</a> -
+            <a class="active" href="h4_part2.html">Part 2</a> -
+            <a href="h4_extra_credit.html">Extra Credit</a>
+        </nav>
+        <h1>Looping Statements</h1>
+        <div class="index">
+            <ul>
+                <li><a href="h4_part1.html">Part 1 - for and while statements</a></li>
+                <li><a class="active" href="h4_part2.html">Part 2 - Compound interest on a principal</a></li>
+                <li><a href="h4_extra_credit.html">Extra Credit</a></li>
+            </ul>
+        </div>
+        <details class="active leftalign">  
+            <p>Create a webpage that contains a script that will calculate compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10. The formula to use is:</p>
+
+            <p>P is the principal (the initial amount you borrow or deposit)</p> 
+
+            <p>r is the annual rate of interest (percentage)</p>
+
+            <p>n is the number of years the amount is deposited</p>
+
+            <p>A is the amount of money accumulated after n years, including interest</p>
+
+            <p>A = P(1 + r)n</p>
+
+            <p>Output in table format the year followed by the total amount calculated for each of the interest rates of 5% - 10%. (Be sure to include cents.) Your 3rd column should contain the corresponding interest rate.</p>
+       </details>
+   
+    <script src="h4_part2.js"></script>
+<a class="button_back" href="index.html">BACK</a><br>
+</div>
+</body>
+
+</html>

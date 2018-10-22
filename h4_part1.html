@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT 133 Homework 4 - Looping Statements</title>
+    <meta name="description" content="Interactive Web Pages-JavaScript 78194-833" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Stephanie Sakai" />
+    <link rel="stylesheet" type="text/css" href="hw4.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a class="active" href="h4_part1.html">Part 1</a> -
+            <a href="h4_part2.html">Part 2</a> -
+            <a href="h4_extra_credit.html">Extra Credit</a>
+        </nav>
+        <h1>Looping Statements</h1>
+        <div class="index">
+            <ul>
+                <li><a class="active" href="h4_part1.html">Part 1 - for and while statements</a></li>
+        
+                <li><a href="h4_part2.html">Part 2 - Compound interest on a principal</a></li>
+                <li><a href="h4_extra_credit.html">Extra Credit</a></li>
+            </ul>
+        </div>
+        <details class="active leftalign">    
+           
+            <p>Part 1a: Create a webpage that contains a script, using the for statement, that calculates the product and sum of every third integer from 5 to 20 inclusive and then displays the results, along with some accompanying text.</p>
+
+            <p>(Note: You should print a line that contains the result of 5 * 8 * 11 * 14 * 17 * 20 and a second line that contains the result of 5 + 8 + 11 + 14 + 17 + 20).</p>
+
+            <p>Part 1b: On the same webpage as Part 1b, create a script, using the while or do while statement, that calculates the product and sum of every fourth integer from 3 to 31 inclusive an then displays the results, along with some accompanying text.</p>
+
+            <p>(Note: You should print a line that contains the result of 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 and a second line that contains the result of 3 + 7 + 11 + 15 + 19 + 23 + 27 + 31).</p>
+
+            <p>Use jQuery UI to allow the user to drag an element to a specific area of the page - can be any type of element. For more on jQuery UI draggable see <a href="http://jqueryui.com/draggable/" target="_blank" >this page</a>.</p>
+          
+        </details>
+    
+        <div id="box">
+             <div id="draggable" class="ui-widget-content">
+              <p id="drag">Click on box and drag around my answer!!</p>
+                 <div id="part1a"></div>
+            </div>
+        </div>          
+<div id="part1b"></div>
+
+
+
+<a class="button_back" href="index.html">BACK</a><br>
+</div>
+    <script src="h4_part1.js"></script>
+</body>
+
+</html>

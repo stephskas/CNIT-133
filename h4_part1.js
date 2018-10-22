@@ -8,7 +8,7 @@ for(x = 5; x<=20; x +=3){
     product *= x;
 
 // Display sum and product results 
-document.getElementById("part1a").innerHTML = "<strong>PART1a:</strong><br> " + "5 + 8 + 11 + 14 + 17 + 20 = " + sum + "<br>" + "5 * 8 * 11 * 14 * 17 * 20 = " + product;   
+document.getElementById("part1a").innerHTML = "<strong>ANSWER - PART1a:</strong><br> The sum of every third integer from 5 to 20 inclusive is " + sum + "<br> 5 + 8 + 11 + 14 + 17 + 20 = " + sum + "<br> The product of every third integer from 5 to 20 inclusive is " + product.toLocaleString("en") + "<br> 5 * 8 * 11 * 14 * 17 * 20 = " + product.toLocaleString("en");   
 };
 
 // PART 1b
@@ -21,8 +21,9 @@ while (x <= 31) {
     sum2 += x;
     product2 *= x;
     x = x + 4;
+    
 // Display sum and product results                
-document.getElementById("part1b").innerHTML = "<strong>PART1b:</strong><br> " + "3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 = " + sum2 + '<br>' + "3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 = " + product2;
+document.getElementById("part1b").innerHTML = "<strong>PART1b:</strong><br> The sum of every fourth integer from 3 to 31 inclusive is  " + sum2 + "<br>3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 = " + sum2 + "<br> The product of every fourth integer from 3 to 31 inclusive is " + product2.toLocaleString("en") + "<br> 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 = " + product2.toLocaleString("en");
         
               };
     

@@ -1,18 +1,3 @@
-/* 
-Create a webpage that contains a script that will calculate compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10. The formula to use is :
-
-P is the principal (the initial amount you borrow or deposit) 
-
-r is the annual rate of interest (percentage)
-
-n is the number of years the amount is deposited
-
-A is the amount of money accumulated after n years, including interest
-
-A = P(1 + r)n 
-
-Output in table format the year followed by the total amount calculated for each of the interest rates of 5% - 10%. (Be sure to include cents.) Your 3rd column should contain the corresponding interest rate. For example, the first 5 table rows should display as:
-*/
 
 //Declare variables
 var year, intRate;
