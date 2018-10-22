@@ -82,6 +82,52 @@ div {
 .italic {
     font-style: italic;
 }
+
+#tableStyle {
+    margin: 40px auto;
+}
+#tableStyle th {
+    background-color: maroon;
+    color: white;
+    font-weight: normal;
+    padding: 10px;
+}
+#tableStyle tr {
+    color: #444;
+    font-weight: normal;
+    line-height: 2em;
+}
+
+.rowColor1 {
+    background-color: whitesmoke;
+}
+.rowColor2 {
+    background-color: lightgray;
+}
+#box {
+    text-align: left;
+}
+
+#part1a{
+    background: #ed5031;
+    color: white;
+    width: 400px;
+    height: 150px;
+    line-height: 2em;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 5%;
+    cursor: move;
+}
+
+#part1b{
+    color: white;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin:30px;
+    text-align: left;    
+}
 /* -----------------BUTTONS------------------ */
 
 .button_back {
