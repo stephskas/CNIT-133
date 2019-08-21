@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/concrete-834490_1920.jpg");
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 25px;
+}
+
+h2 {
+    color: #fff;
+    font-weight: normal;
+    padding: 1em 0 0 .5em;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    color: #444;
+}
+
+.container {
+    width: 760px;
+    margin: 0 auto;
+
+}
+
+.assignments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* -----------------BUTTONS------------------ */
+
+.button {
+    background: rgba(48, 227, 202, 0.9);
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    color: #222;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgba(72, 61, 76, 0.5);
+}
+
+a.button:hover {
+    color: lightgray;
+}
