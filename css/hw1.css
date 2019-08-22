@@ -1,64 +1,86 @@
+/* -----------------GLOBAL ELEMENTS------------------ */
 html,
 body {
     height: 100%;
     background-color: #222;
     font-family: Arial, sans-serif;
     background-image: url("../images/concrete-834490_1920.jpg");
+    text-align: center;
 }
 
 h1 {
     color: #fff;
     margin: 0;
     text-align: center;
-    font-size: 3em;
+    font-size: 5.85vw;
+    letter-spacing: .015em;
     padding-top: 25px;
 }
 
 h2 {
     color: #fff;
+    font-size: 3.75vw;
+    font-weight: bold;
+    letter-spacing: .025em;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h3 {
+    color: #fff;
+    font-size: 3.5vw;
     font-weight: normal;
-    padding: 1em 0 0 .5em;
+    letter-spacing: .075em;
 }
 
 a {
-    font-size: 1.5em;
-    text-decoration: none;
+    font-size: 1em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: .025em;
     clear: both;
     color: #444;
 }
 
-.container {
-    width: 760px;
+main {
     margin: 0 auto;
-
 }
 
+nav {
+    display: inline;
+
+}
+/* -----------------MAIN------------------ */
+.container {
+        width: 100%;
+        margin: 0 auto;
+}
 .assignments {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    margin: 0 2vw;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
 /* -----------------BUTTONS------------------ */
 
 .button {
-    background: rgba(48, 227, 202, 0.9);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: rgba(237, 237, 213, 0.9);
     border-radius: 5px;
-    padding: 5px 30px;
-    margin: 10px;
+    padding: 10px 30px;
     border: 1px solid lightgray;
     color: #222;
     text-decoration: none;
+    text-align: center;
 }
 
 .button:hover {
-    background-color: rgba(72, 61, 76, 0.5);
+    background-color: rgba(72, 61, 76, 0.7);
 }
 
 a.button:hover {
